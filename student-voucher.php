@@ -1,4 +1,4 @@
-							
+<?php
 
 							/************************************************************
 
@@ -9,11 +9,11 @@
 
 							 		created on:	October 7, 2013
 
-							 		version ##:	0.1.0
+							 		version ##:	0.1.1
 
 							 ************************************************************/
 
-<?php
+
 
 	$thisMonth = date("m");
 	$thisYear = date("Y");
@@ -53,6 +53,7 @@
 	/************************************************************
 
 	 	W3schools test_input function
+	 	www.w3schools.com
 
 	 ************************************************************/
 
@@ -139,6 +140,8 @@
 
 		while ($currMonth != $month + 1)
 		{
+			$j = 0;
+
 			echo "<tr>";
 
 			for ($i = 0; $i < 7; $i++)
@@ -146,8 +149,16 @@
 				echo "	<td class='hours'>
 							<div class='date'>
 								$currDay
-							</div>
-						</td>";
+							</div>";
+
+
+				if($_SERVER["REQUEST_METHOD"] == "POST")
+				{
+					echo "	<input name='Table[$j][$i]'class='calendar' type='text' value='".test_input($_POST['Table'][$j][$i])."'>";
+				} 
+				
+				echo "	<input class='calendar' type='text' value='0'>";
+				echo "	</td>";
 
 				if (++$currDay > $daysInCurrMonth)
 				{
@@ -166,6 +177,8 @@
 			            	<div id='total'>0</div>
 			            </td>";
 			}
+			else
+				j++;
 
 			echo "</tr>";
 		}
