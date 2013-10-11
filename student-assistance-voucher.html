@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="student.css" />
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js'></script>
+<script type='text/javascript' src='jquery.mtz.monthpicker.js'></script>
+<script type='text/javascript' src='student.js'></script>
+<link rel='stylesheet' href='jquery-ui.css'>
+<title>Student Assistance Voucher</title>
+</head>
+
+<body>
+
+<h1 class="center bold">STUDENT ASSISTANT ATTENDANCE VOUCHER</h1>
+
+<br />
+
+<table class="header">
+	<tbody>
+    	<tr class="autoHeight">
+        	<td class="headerCell head1">
+            	<div class="bold left-5">NAME (Print):</div>
+                <input class="head1">
+            </td>
+        	<td class="headerCell head2">
+            	<div class="bold left-5">SSN#:</div>
+                <input class="head2">
+            </td>
+        	<td class="headerCell head3">
+            	<div class="bold left-5">DEPARTMENT TITLE <span class="italics">and</span> #:</div>
+                <input class="head3">
+            </td>
+        	<td class="headerCell head4">
+            	<div class="bold left-5">SUPERVISOR NAME <span class="italics">and</span> TITLE:</div>
+                <input class="head4">
+            </td>
+        	<td class="headerCell head5">
+            	<div class="bold left-5">HOURLY RATE:</div>
+                <input class="head5">
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<br />
+
+<table class="yearAndType margin-left-10">
+	<tbody>
+    	<tr class="autoHeight">
+        	<td>
+            	<div>
+                	<div class="bold italics smallBoxDesc float-l">Small Day Box: enter the calendar day</div>
+                    <div class="bold italics">Week Day Box: enter the Total hours worked for each day</div>
+                </div>
+			</td>
+        </tr>
+        <tr>
+        	<td class="last pad-top-20">
+            	<div class="float-l month-year bold">MONTH/YEAR:<input id='month_widget' class='input month'></div>
+            	<form action="" class="assistant">
+                    <input type="radio" name="sa">Federal Work Study Student Assistant
+                    <input type="radio" name="sa">Student Assistant
+                    <input type="radio" name="sa">Bridge Student Assistant
+                </form>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+
+<table class="time-sheet margin-left-10">
+    <thead>
+        <tr class="bg-lightGrey">
+            <th>SUNDAY</th>
+            <th>MONDAY</th>
+            <th>TUESDAY</th>
+            <th>WEDNESDAY</th>
+            <th>THURSDAY</th>
+            <th>FRIDAY</th>
+            <th>SATURDAY</th>
+            <th class="week">WEEKLY HOURS</th>
+        </tr>
+    </thead>
+	<tbody>
+        <tr id="t1">
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="weekly bold">0</td>
+        </tr>
+        <tr id="t2">
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="weekly bold">0</td>
+        </tr>
+        <tr id="t3">
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="weekly bold">0</td>
+        </tr>
+        <tr id="t4">
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="weekly bold">0</td>
+        </tr>
+        <tr id="t5">
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="hours">
+            	<div class="date"></div>
+                <input class='calendar' type='text' onchange='calculate()'>
+            </td>
+            <td class="weekly bold">0</td>
+            <td class="total bold">
+            	<div class="totaltxt">TOTAL HOURS</div>
+            	<div id="total">0</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<br />
+
+<div class="certify center bold print">I CERTIFY THAT THE HOURS REPORTED ABOVE ARE TRUE AND CORRECT.</div>
+
+<div class="signature center print"><p>___________________________________      ___________                      _____________________________________    _________ <br />
+  Student Employee Signature                                  Date                                     Supervisor Signature                                              Date</p></div>
+
+<!--<table class="payroll bold margin-left-10 print">
+	<tr>
+    	<td class="payroll-left">*When school is in session, student assistants may work up to but not in excess of 20 hours per week</td>
+    	<td class="payroll-center"></td>
+    	<td class="payroll-right bg-lightGrey">FOR PAYROLL SERVICES USE ONLY</td>
+    </tr>
+	<tr>
+    	<td class="payroll-left">*When school is NOT in session, student assistants may work up to a maximum of 40 hours per week</td>
+    	<td class="payroll-center"></td>
+    	<td class="payroll-right">Position #:</td>
+    </tr>
+	<tr>
+    	<td class="payroll-left"> – but SHALL NOT be scheduled to work overtime.</td>
+    	<td class="payroll-center"></td>
+    	<td class="payroll-right">Department:</td>
+    </tr>
+</table>-->
+
+<div class="button bg-lightGrey center"><a onclick="window.print()">Print Document!</a></div>
+
+<div class="button bg-lightGrey center"><a onclick="downWeek()">Back a week</a></div>
+<div class="button bg-lightGrey center"><a onclick="upWeek()">Forward a week</a></div>
+
+<div class="payroll payroll-left bold print float-l">
+*When school is in session, student assistants may work up to but not in excess of 20 hours per week<br />
+*When school is NOT in session, student assistants may work up to a maximum of 40 hours per week<br />
+ – but SHALL NOT be scheduled to work overtime.
+</div>
+<div class="payroll payroll-center print float-l">
+</div>
+<div class="payroll payroll-right bold print float-l">
+    <div class="bg-lightGrey pad-left-25">FOR PAYROLL SERVICES USE ONLY</div>
+    <div class="payroll-middle pad-left-25">Position #:</div>
+    <div class="pad-left-25">Department:</div>
+</div>
+
+</body>
+</html>

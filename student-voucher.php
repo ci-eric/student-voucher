@@ -154,11 +154,12 @@
 
 				if($_SERVER["REQUEST_METHOD"] == "POST")
 				{
-					echo "	<input name='Table[$j][$i]'class='calendar' type='text' value='".test_input($_POST['Table'][$j][$i])."'>";
-				} 
-				
-				echo "	<input class='calendar' type='text' value='0'>";
-				echo "	</td>";
+					echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='".test_input($_POST['Table'][$j][$i])."'>";
+				}
+				else
+					echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='0'>";
+
+				echo "</td>";
 
 				if (++$currDay > $daysInCurrMonth)
 				{
@@ -178,7 +179,7 @@
 			            </td>";
 			}
 			else
-				j++;
+				$j++;
 
 			echo "</tr>";
 		}
