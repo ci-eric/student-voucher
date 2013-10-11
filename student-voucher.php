@@ -155,10 +155,10 @@
 				//testing fork
 				if($_SERVER["REQUEST_METHOD"] == "POST")
 				{
-					echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='".test_input($_POST['Table'][$j][$i])."'>";
+					echo "	<input name='Table[][]' class='calendar' type='text' value='".test_input($_POST['Table'][$j][$i])."'>";
 				}
 				else
-					echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='0'>";
+					echo "	<input name='Table[][]' class='calendar' type='text' value='0'>";
 
 				echo "</td>";
 
