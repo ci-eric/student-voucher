@@ -33,6 +33,12 @@
 		$selectYear = $thisYear;
 	}
 
+
+	/************************************************************
+
+	 	
+
+	 ************************************************************/
 	function getFirstDayofCalendar($month, $year)
 	{
 		$monthStart = date("w", mktime(0, 0, 0, $month, 1, $year));
@@ -139,9 +145,12 @@
 			    </thead>";
 		echo "<tbody>";
 
+		$j = 0;
+		$totalHours = 0;
+
 		while ($currMonth != $month + 1)
 		{
-			$j = 0;
+			$weeklyHours = 0;
 
 			echo "<tr>";
 
@@ -152,13 +161,14 @@
 								$currDay
 							</div>";
 
-				//testing fork
 				if($_SERVER["REQUEST_METHOD"] == "POST")
 				{
-					echo "	<input name='Table[][]' class='calendar' type='text' value='".test_input($_POST['Table'][$j][$i])."'>";
+					$weeklyHours += $hours = test_input($_POST['Table'][$j][$i]);
+
+					echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='$hours'>";
 				}
 				else
-					echo "	<input name='Table[][]' class='calendar' type='text' value='0'>";
+					echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='0'>";
 
 				echo "</td>";
 
@@ -170,13 +180,15 @@
 				}
 			}
 
-			echo "<td class='weekly bold'>0</td>";
+			echo "<td class='weekly bold'>$weeklyHours</td>";
+
+			$totalHours += $weeklyHours;
 
 			if ($currMonth == $month + 1)
 			{
 				echo "	<td class='total bold'>
 			            	<div class='totaltxt'>TOTAL HOURS</div>
-			            	<div id='total'>0</div>
+			            	<div id='total'>$totalHours</div>
 			            </td>";
 			}
 			else
@@ -188,6 +200,11 @@
 		echo "</tbody></table>";
 	}
 
+	/************************************************************
+
+	 	
+
+	 ************************************************************/
 	function createMYselector($thisYear, $selectYear, $month)
 	{
 		echo "<select name='MonthSelect'>";
