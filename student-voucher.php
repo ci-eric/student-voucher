@@ -255,11 +255,23 @@
 			echo "	<p>
 						Previous Week
 					</p>
-					<input type='checkbox' name='prevWeek' value='true'>
+					<input type='checkbox' name='prevWeek' value='true'";
+
+			if (self::test_input($_POST['prevWeek']) == 'true')
+				echo "checked='checked'";
+
+
+					 
+			echo "	>
 					<p>
 						Next Week
 					</p>
-					<input type='checkbox' name='nextWeek' value='true'>";
+					<input type='checkbox' name='nextWeek' value='true'";
+
+			if (self::test_input($_POST['nextWeek']) == 'true')
+				echo "checked='checked'";
+
+			echo "	>";
 		}
 		
 
