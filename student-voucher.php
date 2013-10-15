@@ -69,7 +69,7 @@
 		public static function getFirstDayofCalendar($month, $year)
 		{
 			$monthStart = date("w", mktime(0, 0, 0, $month, 1, $year));
-			$prevWeek = $this->test_input($_POST['prevWeek']);
+			$prevWeek = self::test_input($_POST['prevWeek']);
 
 			if ($monthStart == 0)
 			{
@@ -201,7 +201,7 @@
 
 					if($_SERVER["REQUEST_METHOD"] == "POST")
 					{
-						$weeklyHours += $hours = $this->test_input($_POST['Table'][$j][$i]);
+						$weeklyHours += $hours = self::test_input($_POST['Table'][$j][$i]);
 
 						echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='$hours'>";
 					}
@@ -309,7 +309,7 @@
 	echo "<form method='post'>";
 
 	Calendar::createUser();
-	//Calendar::rowSelection();
+	Calendar::rowSelection();
 	Calendar::createMYselector($thisYear, $selectYear, $selectMonth);
 	Calendar::createTable($selectMonth, $selectYear);
 
