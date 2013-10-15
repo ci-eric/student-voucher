@@ -69,9 +69,15 @@
 		public static function getFirstDayofCalendar($month, $year)
 		{
 			$monthStart = date("w", mktime(0, 0, 0, $month, 1, $year));
+			$prevWeek = $this->test_input($_POST['prevWeek']);
 
 			if ($monthStart == 0)
-				return 1;
+			{
+				if ($prevWeek == 'true')
+					return date("t", mktime(0, 0, 0, $month, 1, $year)) - 7;
+				else
+					return 1;
+			}
 
 			if ($month > 01)
 				$month--;
@@ -81,7 +87,10 @@
 				$year--;
 			}
 
-			return date("t", mktime(0, 0, 0, $month, 1, $year)) - ($monthStart - 1);
+			if ($prevWeek == 'true')
+				return date("t", mktime(0, 0, 0, $month, 1, $year)) - ($monthStart - 1) - 7;
+			else
+				return date("t", mktime(0, 0, 0, $month, 1, $year)) - ($monthStart - 1);
 		}
 
 
@@ -246,11 +255,11 @@
 			echo "	<p>
 						Previous Week
 					</p>
-					<input type='checkbox' name='prevMonth' value='true'>
+					<input type='checkbox' name='prevWeek' value='true'>
 					<p>
 						Next Week
 					</p>
-					<input type='checkbox' name='nextMonth' value='true'>";
+					<input type='checkbox' name='nextWeek' value='true'>";
 		}
 		
 
@@ -300,7 +309,7 @@
 	echo "<form method='post'>";
 
 	Calendar::createUser();
-	Calendar::rowSelection();
+	//Calendar::rowSelection();
 	Calendar::createMYselector($thisYear, $selectYear, $selectMonth);
 	Calendar::createTable($selectMonth, $selectYear);
 
