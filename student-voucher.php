@@ -228,6 +228,24 @@
 
 			echo "</tbody></table>";
 		}
+
+
+		/************************************************************
+
+		 	rowSelection
+
+		 	creates checkboxes that will inform the table if 
+		 		additional rows need to be added to the table
+
+		 	after page submission, createTable and firstDayofCalendar
+		 		will know the number of extra rows to add
+
+		 ************************************************************/
+		public static function rowSelection()
+		{
+			echo "	<input type='checkbox' name='prevMonth' value='true'>
+					<input type='checkbox' name='nextMonth' value='true'>";
+		}
 		
 
 		/************************************************************
