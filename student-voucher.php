@@ -243,7 +243,13 @@
 		 ************************************************************/
 		public static function rowSelection()
 		{
-			echo "	<input type='checkbox' name='prevMonth' value='true'>
+			echo "	<p>
+						Previous Week
+					</p>
+					<input type='checkbox' name='prevMonth' value='true'>
+					<p>
+						Next Week
+					</p>
 					<input type='checkbox' name='nextMonth' value='true'>";
 		}
 		
@@ -294,6 +300,7 @@
 	echo "<form method='post'>";
 
 	Calendar::createUser();
+	Calendar::rowSelection();
 	Calendar::createMYselector($thisYear, $selectYear, $selectMonth);
 	Calendar::createTable($selectMonth, $selectYear);
 
