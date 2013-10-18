@@ -10,7 +10,7 @@
 
 							 		created on:	October 7, 2013
 
-							 		version ##:	0.1.3
+							 		version ##:	0.1.4
 
 							 ************************************************************/
 
@@ -34,6 +34,10 @@
 		getFirstDayofCalendar
 			$month, $year
 			return $date
+
+		getWeeksofCalendar
+			$currDay, $daysInCurrMonth, $currMonth, $month
+			return $weeks
 
 		test_input
 			$data
@@ -91,6 +95,52 @@
 				return date("t", mktime(0, 0, 0, $month, 1, $year)) - ($monthStart - 1) - 7;
 			else
 				return date("t", mktime(0, 0, 0, $month, 1, $year)) - ($monthStart - 1);
+		}
+
+
+		/************************************************************
+
+		 	getWeeksofCalendar
+				$currDay
+				$daysInCurrMonth
+				$currMonth
+				$month
+
+			determines the amount of weeks needed to be created in the
+				calendar
+
+			grabs the starting day of the calendar (already handles
+				previous month) and goes by week by week until it
+				hits the end of the month
+
+			if nextWeek is requested, adds one extra week before
+				returning it
+
+		 ************************************************************/
+
+		public static function getWeeksofCalendar($currDay, $daysInCurrMonth, $currMonth, $month)
+		{
+			$weeks = 0;
+
+			while ($currMonth != $month + 1)
+			{
+				$weeks++;
+				$currDay += 7;
+
+				if ($currDay > $daysInCurrMonth)
+				{
+					$currDay -= $daysInCurrMonth;
+					$currMonth++;
+					$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, 2000));
+				}
+
+				echo "weeks: $weeks | currDay: $currDay <br />";
+			}
+
+			if (self::test_input($_POST['nextWeek']) == 'true')
+				$weeks++;
+
+			return $weeks;
 		}
 
 
@@ -162,11 +212,14 @@
 		public static function createTable($month, $year)
 		{
 			$currDay = self::getFirstDayofCalendar($month, $year);
+
 			if ($currDay == 1)
 				$currMonth = $month;
 			else
 				$currMonth = $month - 1;
 			$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, $year));
+
+			$weeks = self::getWeeksofCalendar($currDay, $daysInCurrMonth, $currMonth, $month);
 
 			echo "<table class='time-sheet margin-left-10'>";
 			echo "	<thead>
@@ -186,7 +239,7 @@
 			$j = 0;
 			$totalHours = 0;
 
-			while ($currMonth != $month + 1)
+			while ($j < $weeks)
 			{
 				$weeklyHours = 0;
 
@@ -221,16 +274,16 @@
 				echo "<td class='weekly bold'>$weeklyHours</td>";
 
 				$totalHours += $weeklyHours;
+				
+				$j++;
 
-				if ($currMonth == $month + 1)
+				if ($j == $weeks)
 				{
 					echo "	<td class='total bold'>
 				            	<div class='totaltxt'>TOTAL HOURS</div>
 				            	<div id='total'>$totalHours</div>
 				            </td>";
 				}
-				else
-					$j++;
 
 				echo "</tr>";
 			}
