@@ -30,18 +30,19 @@
 		
 		contains functions that helps in the creation of the 
 			Calendar for the Student Voucher Application
+
+
+		test_input
+			$data
+			return $data
 		
 		getFirstDayofCalendar
 			$month, $year
 			return $date
 
 		getWeeksofCalendar
-			$currDay, $daysInCurrMonth, $currMonth, $month
+			$currDay, $daysInCurrMonth, $currMonth, $month, $year
 			return $weeks
-
-		test_input
-			$data
-			return $data
 
 		createUser
 
@@ -53,6 +54,21 @@
 
 	 ************************************************************/
 	class Calendar {
+
+
+		/************************************************************
+
+		 	W3schools test_input function
+		 	www.w3schools.com
+
+		 ************************************************************/
+		public static function test_input($data)
+		{
+			$data = trim($data);
+			//$data = stripslashes($data);
+			$data = htmlspecialchars($data);
+			return $data;
+		}
 
 
 		/************************************************************
@@ -105,6 +121,7 @@
 				$daysInCurrMonth
 				$currMonth
 				$month
+				$year
 
 			determines the amount of weeks needed to be created in the
 				calendar
@@ -118,11 +135,11 @@
 
 		 ************************************************************/
 
-		public static function getWeeksofCalendar($currDay, $daysInCurrMonth, $currMonth, $month)
+		public static function getWeeksofCalendar($currDay, $daysInCurrMonth, $currMonth, $month, $year)
 		{
 			$weeks = 0;
 
-			while ($currMonth != $month + 1)
+			while ($currMonth < $month + 1)
 			{
 				$weeks++;
 				$currDay += 7;
@@ -131,7 +148,7 @@
 				{
 					$currDay -= $daysInCurrMonth;
 					$currMonth++;
-					$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, 2000));
+					$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, $year));
 				}
 
 				echo "weeks: $weeks | currDay: $currDay <br />";
@@ -141,21 +158,6 @@
 				$weeks++;
 
 			return $weeks;
-		}
-
-
-		/************************************************************
-
-		 	W3schools test_input function
-		 	www.w3schools.com
-
-		 ************************************************************/
-		public static function test_input($data)
-		{
-			$data = trim($data);
-			//$data = stripslashes($data);
-			$data = htmlspecialchars($data);
-			return $data;
 		}
 
 
@@ -211,15 +213,17 @@
 		 ************************************************************/
 		public static function createTable($month, $year)
 		{
+			$j = 0;
+			$totalHours = 0;
 			$currDay = self::getFirstDayofCalendar($month, $year);
 
 			if ($currDay == 1)
 				$currMonth = $month;
 			else
 				$currMonth = $month - 1;
-			$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, $year));
 
-			$weeks = self::getWeeksofCalendar($currDay, $daysInCurrMonth, $currMonth, $month);
+			$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, $year));
+			$weeks = self::getWeeksofCalendar($currDay, $daysInCurrMonth, $currMonth, $month, $year);
 
 			echo "<table class='time-sheet margin-left-10'>";
 			echo "	<thead>
@@ -235,9 +239,6 @@
 				        </tr>
 				    </thead>";
 			echo "<tbody>";
-
-			$j = 0;
-			$totalHours = 0;
 
 			while ($j < $weeks)
 			{
