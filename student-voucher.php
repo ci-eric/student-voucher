@@ -150,8 +150,6 @@
 					$currMonth++;
 					$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, $year));
 				}
-
-				echo "weeks: $weeks | currDay: $currDay <br />";
 			}
 
 			if (self::test_input($_POST['nextWeek']) == 'true')
