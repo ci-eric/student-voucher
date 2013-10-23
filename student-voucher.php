@@ -10,7 +10,7 @@
 
 							 		created on:	October 7, 1999
 
-							 		version ##:	0.1.3
+							 		version ##:	0.1.4
 
 							 ************************************************************/
 
@@ -30,14 +30,19 @@
 		
 		contains functions that helps in the creation of the 
 			Calendar for the Student Voucher Application
+
+
+		test_input
+			$data
+			return $data
 		
 		getFirstDayofCalendar
 			$month, $year
 			return $date
 
-		test_input
-			$data
-			return $data
+		getWeeksofCalendar
+			$currDay, $daysInCurrMonth, $currMonth, $month, $year
+			return $weeks
 
 		createUser
 
@@ -49,6 +54,21 @@
 
 	 ************************************************************/
 	class Calendar {
+
+
+		/************************************************************
+
+		 	W3schools test_input function
+		 	www.w3schools.com
+
+		 ************************************************************/
+		public static function test_input($data)
+		{
+			$data = trim($data);
+			//$data = stripslashes($data);
+			$data = htmlspecialchars($data);
+			return $data;
+		}
 
 
 		/************************************************************
@@ -69,9 +89,15 @@
 		public static function getFirstDayofCalendar($month, $year)
 		{
 			$monthStart = date("w", mktime(0, 0, 0, $month, 1, $year));
+			$prevWeek = self::test_input($_POST['prevWeek']);
 
 			if ($monthStart == 0)
-				return 1;
+			{
+				if ($prevWeek == 'true')
+					return date("t", mktime(0, 0, 0, $month, 1, $year)) - 7;
+				else
+					return 1;
+			}
 
 			if ($month > 01)
 				$month--;
@@ -81,22 +107,57 @@
 				$year--;
 			}
 
-			return date("t", mktime(0, 0, 0, $month, 1, $year)) - ($monthStart - 1);
+			if ($prevWeek == 'true')
+				return date("t", mktime(0, 0, 0, $month, 1, $year)) - ($monthStart - 1) - 7;
+			else
+				return date("t", mktime(0, 0, 0, $month, 1, $year)) - ($monthStart - 1);
 		}
 
 
 		/************************************************************
 
-		 	W3schools test_input function
-		 	www.w3schools.com
+		 	getWeeksofCalendar
+				$currDay
+				$daysInCurrMonth
+				$currMonth
+				$month
+				$year
+
+			determines the amount of weeks needed to be created in the
+				calendar
+
+			grabs the starting day of the calendar (already handles
+				previous month) and goes by week by week until it
+				hits the end of the month
+
+			if nextWeek is requested, adds one extra week before
+				returning it
 
 		 ************************************************************/
-		public static function test_input($data)
+
+		public static function getWeeksofCalendar($currDay, $daysInCurrMonth, $currMonth, $month, $year)
 		{
-			$data = trim($data);
-			//$data = stripslashes($data);
-			$data = htmlspecialchars($data);
-			return $data;
+			$weeks = 0;
+
+			while ($currMonth < $month + 1)
+			{
+				$weeks++;
+				$currDay += 7;
+
+				if ($currDay > $daysInCurrMonth)
+				{
+					$currDay -= $daysInCurrMonth;
+					$currMonth++;
+					$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, $year));
+				}
+
+				echo "weeks: $weeks | currDay: $currDay <br />";
+			}
+
+			if (self::test_input($_POST['nextWeek']) == 'true')
+				$weeks++;
+
+			return $weeks;
 		}
 
 
@@ -152,12 +213,17 @@
 		 ************************************************************/
 		public static function createTable($month, $year)
 		{
+			$j = 0;
+			$totalHours = 0;
 			$currDay = self::getFirstDayofCalendar($month, $year);
+
 			if ($currDay == 1)
 				$currMonth = $month;
 			else
 				$currMonth = $month - 1;
+
 			$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, $year));
+			$weeks = self::getWeeksofCalendar($currDay, $daysInCurrMonth, $currMonth, $month, $year);
 
 			echo "<table class='time-sheet margin-left-10'>";
 			echo "	<thead>
@@ -174,10 +240,7 @@
 				    </thead>";
 			echo "<tbody>";
 
-			$j = 0;
-			$totalHours = 0;
-
-			while ($currMonth != $month + 1)
+			while ($j < $weeks)
 			{
 				$weeklyHours = 0;
 
@@ -192,7 +255,7 @@
 
 					if($_SERVER["REQUEST_METHOD"] == "POST")
 					{
-						$weeklyHours += $hours = $this->test_input($_POST['Table'][$j][$i]);
+						$weeklyHours += $hours = self::test_input($_POST['Table'][$j][$i]);
 
 						echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='$hours'>";
 					}
@@ -212,21 +275,57 @@
 				echo "<td class='weekly bold'>$weeklyHours</td>";
 
 				$totalHours += $weeklyHours;
+				
+				$j++;
 
-				if ($currMonth == $month + 1)
+				if ($j == $weeks)
 				{
 					echo "	<td class='total bold'>
 				            	<div class='totaltxt'>TOTAL HOURS</div>
 				            	<div id='total'>$totalHours</div>
 				            </td>";
 				}
-				else
-					$j++;
 
 				echo "</tr>";
 			}
 
 			echo "</tbody></table>";
+		}
+
+
+		/************************************************************
+
+		 	rowSelection
+
+		 	creates checkboxes that will inform the table if 
+		 		additional rows need to be added to the table
+
+		 	after page submission, createTable and firstDayofCalendar
+		 		will know the number of extra rows to add
+
+		 ************************************************************/
+		public static function rowSelection()
+		{
+			echo "	<p>
+						Previous Week
+					</p>
+					<input type='checkbox' name='prevWeek' value='true'";
+
+			if (self::test_input($_POST['prevWeek']) == 'true')
+				echo "checked='checked'";
+
+
+					 
+			echo "	>
+					<p>
+						Next Week
+					</p>
+					<input type='checkbox' name='nextWeek' value='true'";
+
+			if (self::test_input($_POST['nextWeek']) == 'true')
+				echo "checked='checked'";
+
+			echo "	>";
 		}
 		
 
@@ -276,6 +375,7 @@
 	echo "<form method='post'>";
 
 	Calendar::createUser();
+	Calendar::rowSelection();
 	Calendar::createMYselector($thisYear, $selectYear, $selectMonth);
 	Calendar::createTable($selectMonth, $selectYear);
 
