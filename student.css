@@ -5,6 +5,7 @@ h1 {
 	font-size:22px; 
 	width:510px;
 }
+
 table { border-collapse:collapse; }
 .header tbody, .yearAndType tbody, .time-sheet tbody, .payroll tbody,
 .header td, .yearAndType td, .time-sheet td,
@@ -16,6 +17,9 @@ th {
 	font-size:16px;
 	height:35px;
 }
+
+td,
+th 				{ vertical-align: middle; }
 
 .smallBoxDesc {
 	margin:0 75px 0 120px;
@@ -96,8 +100,6 @@ th {
 .date,
 th 				{ text-align:center; }
 
-td,
-th 				{ vertical-align: middle; }
 
 .bold			{ font-weight:bold; }
 
