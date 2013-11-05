@@ -14,7 +14,7 @@
 
 							 ************************************************************/
 
-
+	date_default_timezone_set('America/Los_Angeles');
 
 	$thisMonth = date("m");
 	$thisYear = date("Y");
