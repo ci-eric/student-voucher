@@ -18,6 +18,15 @@ th {
 	height:35px;
 }
 
+.yearAndType,
+.yearAndType tbody,
+.yearAndType tr,
+.yearAndType .last {
+	border-bottom:none;
+}
+
+.yearAndType { width:917px; }
+
 td,
 th 				{ vertical-align: middle; }
 
@@ -35,13 +44,6 @@ th 				{ vertical-align: middle; }
 .italics { font-style:italic; }
 
 .headerCell { font-size:13px; }
-
-.yearAndType,
-.yearAndType tbody,
-.yearAndType tr,
-.yearAndType .last {
-	border-bottom:none;
-}
 
 .payroll {
 	font-size:12px;
@@ -68,8 +70,6 @@ th 				{ vertical-align: middle; }
 }
 
 .height-40	{ height:40px; }
-
-.yearAndType { width:917px; }
 
 .date{
 	border:1px solid #000;
