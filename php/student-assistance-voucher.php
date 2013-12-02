@@ -33,15 +33,15 @@
 		</tbody>
 	</table>
 
-	<div class="center">
-		<div class="payroll payroll-left bold float-l">
+	<div class="payroll center">
+		<div class="payroll-left bold float-l">
 		*When school is in session, student assistants may work up to but not in excess of 20 hours per week<br />
 		*When school is NOT in session, student assistants may work up to a maximum of 40 hours per week<br />
 		 – but SHALL NOT be scheduled to work overtime.
 		</div>
-		<div class="payroll payroll-center float-l">
+		<div class="payroll-center float-l">
 		</div>
-		<div class="payroll payroll-right bold float-l">
+		<div class="payroll-right bold float-l">
 		    <div class="bg-lightGrey pad-left-25">FOR PAYROLL SERVICES USE ONLY</div>
 		    <div class="payroll-middle pad-left-25">Position #:</div>
 		    <div class="pad-left-25">Department:</div>

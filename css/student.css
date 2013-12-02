@@ -49,29 +49,6 @@ th {
 .yearAndType .last {
   border-bottom: none; }
 
-.payroll {
-  font-size: 12px;
-  height: 52px; }
-
-.payroll-left {
-  width: 620px;
-  padding: 0 0 0 10px;
-  margin-left: 10px;
-  border: 1px solid; }
-
-.payroll-right {
-  width: 283px;
-  border: 1px solid; }
-
-.payroll-center {
-  background: #000;
-  width: 34px;
-  border-bottom: 2px solid; }
-
-.payroll-middle {
-  border-bottom: 1px solid;
-  border-top: 1px solid; }
-
 .height-40 {
   height: 40px; }
 
@@ -248,3 +225,29 @@ table.signature {
     padding-bottom: 0; }
   table.signature tr:last-child td {
     padding-top: 0; }
+
+.payroll {
+  font-size: 12px;
+  width: 953px;
+  height: 52px; }
+
+.payroll-left {
+  width: 620px;
+  padding: 0 0 0 10px;
+  border: 1px solid;
+  height: 52px; }
+
+.payroll-right {
+  width: 283px;
+  border: 1px solid;
+  height: 52px; }
+
+.payroll-center {
+  background: #000;
+  width: 34px;
+  border-bottom: 2px solid;
+  height: 52px; }
+
+.payroll-middle {
+  border-bottom: 1px solid;
+  border-top: 1px solid; }
