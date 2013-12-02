@@ -237,14 +237,14 @@ input[type="radio"] {
 
   .print {
     display: block; } }
-.signature {
-  width: 900px; }
-  .signature td:nth-child(1),
-  .signature td:nth-child(3) {
+table.signature {
+  width: 831px; }
+  table.signature td:nth-child(1),
+  table.signature td:nth-child(3) {
     padding-right: 20px; }
-  .signature td:nth-child(2) {
+  table.signature td:nth-child(2) {
     padding-right: 50px; }
-  .signature tr:first-child td {
+  table.signature tr:first-child td {
     padding-bottom: 0; }
-  .signature tr:last-child td {
+  table.signature tr:last-child td {
     padding-top: 0; }
