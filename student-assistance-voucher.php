@@ -16,24 +16,22 @@
 		____________________________________________ <br />
 		Student Employee Signature  Date Supervisor Signature Date</p></div>
 
-	<div class="signature center">
-		<table>
-			<tbody>
-				<tr>
-					<td>___________________________________</td>
-					<td>___________</td>
-					<td>___________________________________</td>
-					<td>___________</td>
-				</tr>
-				<tr>
-					<td>Student Employee Signature</td>
-					<td>Date</td>
-					<td>Supervisor Signature</td>
-					<td>Date</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+	<table class="signature center">
+		<tbody>
+			<tr>
+				<td>___________________________________</td>
+				<td>___________</td>
+				<td>___________________________________</td>
+				<td>___________</td>
+			</tr>
+			<tr>
+				<td>Student Employee Signature</td>
+				<td>Date</td>
+				<td>Supervisor Signature</td>
+				<td>Date</td>
+			</tr>
+		</tbody>
+	</table>
 
 	<div class="payroll payroll-left bold print float-l">
 	*When school is in session, student assistants may work up to but not in excess of 20 hours per week<br />

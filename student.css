@@ -214,7 +214,7 @@ input[type="radio"] {
 }
 
 .certify	{ width:580px; }
-.signature	{ width:90%; }
+.signature	{ width:900px; }
 .print		{ display:none; }
 
 @media print
