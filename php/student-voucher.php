@@ -223,7 +223,7 @@
 			$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, $year));
 			$weeks = self::getWeeksofCalendar($currDay, $daysInCurrMonth, $currMonth, $month, $year);
 
-			echo "<table class='time-sheet margin-left-10'>";
+			echo "<table class='time-sheet center'>";
 			echo "	<thead>
 				        <tr class='bg-lightGrey'>
 				            <th>SUNDAY</th>
@@ -304,26 +304,24 @@
 		 ************************************************************/
 		public static function rowSelection()
 		{
-			echo "	<p>
-						Previous Week
-					</p>
+			echo "<div class='week-selection'>
 					<input type='checkbox' name='prevWeek' value='true'";
 
 			if (self::test_input($_POST['prevWeek']) == 'true')
 				echo "checked='checked'";
+					
 
-
-					 
 			echo "	>
-					<p>
-						Next Week
-					</p>
+					Previous Week
+					
 					<input type='checkbox' name='nextWeek' value='true'";
 
 			if (self::test_input($_POST['nextWeek']) == 'true')
 				echo "checked='checked'";
 
-			echo "	>";
+			echo "	>
+					Next Week
+				  </div>";
 		}
 		
 
