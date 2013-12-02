@@ -189,9 +189,9 @@
 				$supr = '';
 			}
 
-			echo "	<input type='text' value=$name>
-					<input type='text' value=$dept>
-					<input type='text' value=$supr>";
+			echo "	<input class='head1' type='text' value=$name>
+					<input class='head3' type='text' value=$dept>
+					<input class='head4' type='text' value=$supr>";
 		}
 
 
