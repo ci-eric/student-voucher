@@ -251,3 +251,23 @@ table.signature {
 .payroll-middle {
   border-bottom: 1px solid;
   border-top: 1px solid; }
+
+.week-selection input {
+  width: auto; }
+@media only screen and (min-width: 1280px) {
+  .week-selection {
+    position: fixed;
+    top: 100px;
+    width: 120px; } }
+
+.monthSelect, .yearSelect {
+  margin: 3px 4px;
+  width: 60px; }
+  @media only screen and (min-width: 1280px) {
+    .monthSelect, .yearSelect {
+      position: fixed;
+      top: 75px; } }
+
+@media only screen and (min-width: 1280px) {
+  .yearSelect {
+    left: 75px; } }

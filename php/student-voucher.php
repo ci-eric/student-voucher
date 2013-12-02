@@ -341,7 +341,7 @@
 		 ************************************************************/
 		public static function createMYselector($thisYear, $selectYear, $month)
 		{
-			echo "<select name='MonthSelect'>";
+			echo "<select class='monthSelect' name='MonthSelect'>";
 
 			for ($i=1; $i<=12; $i++)
 			{
@@ -349,7 +349,7 @@
 			}
 
 			echo "		</select>
-						<select name='YearSelect'>
+						<select class='yearSelect' name='YearSelect'>
 							<option value='"			.($thisYear-1)."' ".($thisYear-1 == $selectYear ? "selected='selected'" : "").">".($thisYear-1)."</option>
 							<option value='$thisYear' "	.($thisYear == $selectYear ? "selected='selected'" : "").">$thisYear</option>
 							<option value='"			.($thisYear+1)."' ".($thisYear+1 == $selectYear ? "selected='selected'" : "").">".($thisYear+1)."</option>

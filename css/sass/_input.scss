@@ -1,13 +1,38 @@
 
 
-input[type="radio"] {
-    -webkit-appearance: checkbox;
-    -moz-appearance: checkbox;
-    -ms-appearance: checkbox;     /* not currently supported */
-    -o-appearance: checkbox;      /* not currently supported */
-	width:auto;
+.week-selection {
+
+	& input {
+		width: auto;
+	}	
+
+	@media only screen and (min-width: 1280px)
+	{
+		position: fixed;
+		top: 100px;
+		width: 120px;
+	}
 }
 
-.week-selection {
-	
+%select {
+	margin: 3px 4px;
+	width: 60px;
+
+	@media only screen and (min-width: 1280px)
+	{
+		position: fixed;
+		top: 75px;
+	}
+}
+
+.monthSelect {
+	@extend %select;
+}
+.yearSelect {
+	@extend %select;
+
+	@media only screen and (min-width: 1280px)
+	{
+		left: 75px;
+	}
 }
