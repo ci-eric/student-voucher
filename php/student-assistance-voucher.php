@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-cell-Type" content-cell="text/html; charset=utf-8" />
-<link type="text/css" rel="stylesheet" href="student.css" />
+<link type="text/css" rel="stylesheet" href="../css/student.css" />
 <title>Student Voucher</title>
 </head>
 
