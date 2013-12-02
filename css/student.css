@@ -275,3 +275,8 @@ table.signature {
 @media only screen and (min-width: 1280px) {
   .yearSelect {
     left: 75px; } }
+
+input[type='submit'].btn {
+  border: 1px solid black;
+  border-radius: 8px;
+  width: auto; }

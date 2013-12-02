@@ -375,5 +375,5 @@
 	Calendar::createMYselector($thisYear, $selectYear, $selectMonth);
 	Calendar::createTable($selectMonth, $selectYear);
 
-	echo "<input type='submit'></form>";
+	echo "<input class='btn' type='submit'></form>";
 ?>
