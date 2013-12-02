@@ -269,5 +269,9 @@ table.signature {
       top: 75px; } }
 
 @media only screen and (min-width: 1280px) {
+  .monthSelect {
+    left: 8px; } }
+
+@media only screen and (min-width: 1280px) {
   .yearSelect {
     left: 75px; } }

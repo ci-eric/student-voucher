@@ -27,6 +27,11 @@
 
 .monthSelect {
 	@extend %select;
+
+	@media only screen and (min-width: 1280px)
+	{
+		left: 8px;
+	}
 }
 .yearSelect {
 	@extend %select;
