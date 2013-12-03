@@ -189,9 +189,9 @@
 				$supr = '';
 			}
 
-			echo "	<input type='text' value=$name>
-					<input type='text' value=$dept>
-					<input type='text' value=$supr>";
+			echo "	<input class='head1' type='text' value=$name>
+					<input class='head3' type='text' value=$dept>
+					<input class='head4' type='text' value=$supr>";
 		}
 
 
@@ -223,7 +223,7 @@
 			$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, $year));
 			$weeks = self::getWeeksofCalendar($currDay, $daysInCurrMonth, $currMonth, $month, $year);
 
-			echo "<table class='time-sheet margin-left-10'>";
+			echo "<table class='time-sheet center'>";
 			echo "	<thead>
 				        <tr class='bg-lightGrey'>
 				            <th>SUNDAY</th>
@@ -304,26 +304,24 @@
 		 ************************************************************/
 		public static function rowSelection()
 		{
-			echo "	<p>
-						Previous Week
-					</p>
+			echo "<div class='week-selection'>
 					<input type='checkbox' name='prevWeek' value='true'";
 
 			if (self::test_input($_POST['prevWeek']) == 'true')
 				echo "checked='checked'";
+					
 
-
-					 
 			echo "	>
-					<p>
-						Next Week
-					</p>
+					Previous Week
+					
 					<input type='checkbox' name='nextWeek' value='true'";
 
 			if (self::test_input($_POST['nextWeek']) == 'true')
 				echo "checked='checked'";
 
-			echo "	>";
+			echo "	>
+					Next Week
+				  </div>";
 		}
 		
 
@@ -343,7 +341,7 @@
 		 ************************************************************/
 		public static function createMYselector($thisYear, $selectYear, $month)
 		{
-			echo "<select name='MonthSelect'>";
+			echo "<select class='monthSelect' name='MonthSelect'>";
 
 			for ($i=1; $i<=12; $i++)
 			{
@@ -351,7 +349,7 @@
 			}
 
 			echo "		</select>
-						<select name='YearSelect'>
+						<select class='yearSelect' name='YearSelect'>
 							<option value='"			.($thisYear-1)."' ".($thisYear-1 == $selectYear ? "selected='selected'" : "").">".($thisYear-1)."</option>
 							<option value='$thisYear' "	.($thisYear == $selectYear ? "selected='selected'" : "").">$thisYear</option>
 							<option value='"			.($thisYear+1)."' ".($thisYear+1 == $selectYear ? "selected='selected'" : "").">".($thisYear+1)."</option>
@@ -377,5 +375,5 @@
 	Calendar::createMYselector($thisYear, $selectYear, $selectMonth);
 	Calendar::createTable($selectMonth, $selectYear);
 
-	echo "<input type='submit'></form>";
+	echo "<input class='btn' type='submit'></form>";
 ?>

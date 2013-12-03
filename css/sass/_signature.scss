@@ -1,0 +1,24 @@
+
+
+table.signature { 
+	width:831px; 
+
+	td:nth-child(1),
+	td:nth-child(3) {
+		padding-right: 20px;
+	}
+	td:nth-child(2) {
+		padding-right: 50px;
+	}
+
+	tr:first-child {
+		td {
+			padding-bottom: 0;
+		}
+	}
+	tr:last-child {
+		td {
+			padding-top: 0;
+		}
+	}
+}

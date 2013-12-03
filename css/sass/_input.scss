@@ -1,0 +1,49 @@
+
+
+.week-selection {
+
+	& input {
+		width: auto;
+	}	
+
+	@media only screen and (min-width: 1280px)
+	{
+		position: fixed;
+		top: 100px;
+		width: 120px;
+	}
+}
+
+%select {
+	margin: 3px 4px;
+	width: 60px;
+
+	@media only screen and (min-width: 1280px)
+	{
+		position: fixed;
+		top: 75px;
+	}
+}
+
+.monthSelect {
+	@extend %select;
+
+	@media only screen and (min-width: 1280px)
+	{
+		left: 8px;
+	}
+}
+.yearSelect {
+	@extend %select;
+
+	@media only screen and (min-width: 1280px)
+	{
+		left: 75px;
+	}
+}
+
+input[type='submit'].btn {
+	border: 1px solid black;
+	border-radius: 8px;
+	width: auto;
+}

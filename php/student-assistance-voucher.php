@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-cell-Type" content-cell="text/html; charset=utf-8" />
-<link type="text/css" rel="stylesheet" href="student.css" />
+<link type="text/css" rel="stylesheet" href="../css/student.css" />
 <title>Student Voucher</title>
 </head>
 
@@ -33,18 +33,19 @@
 		</tbody>
 	</table>
 
-	<div class="payroll payroll-left bold print float-l">
-	*When school is in session, student assistants may work up to but not in excess of 20 hours per week<br />
-	*When school is NOT in session, student assistants may work up to a maximum of 40 hours per week<br />
-	 – but SHALL NOT be scheduled to work overtime.
+	<div class="payroll center">
+		<div class="payroll-left bold float-l">
+		*When school is in session, student assistants may work up to but not in excess of 20 hours per week<br />
+		*When school is NOT in session, student assistants may work up to a maximum of 40 hours per week<br />
+		 - but SHALL NOT be scheduled to work overtime.
+		</div>
+		<div class="payroll-center float-l">
+		</div>
+		<div class="payroll-right bold float-l">
+		    <div class="bg-lightGrey pad-left-25">FOR PAYROLL SERVICES USE ONLY</div>
+		    <div class="payroll-middle pad-left-25">Position #:</div>
+		    <div class="pad-left-25">Department:</div>
+		</div>
 	</div>
-	<div class="payroll payroll-center print float-l">
-	</div>
-	<div class="payroll payroll-right bold print float-l">
-	    <div class="bg-lightGrey pad-left-25">FOR PAYROLL SERVICES USE ONLY</div>
-	    <div class="payroll-middle pad-left-25">Position #:</div>
-	    <div class="pad-left-25">Department:</div>
-	</div>
-
 </body>
 </html>
