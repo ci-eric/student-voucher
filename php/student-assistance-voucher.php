@@ -11,11 +11,7 @@
     <?php include "student-voucher.php"; ?>
 
     <div class="certify center bold print">I CERTIFY THAT THE HOURS REPORTED ABOVE ARE TRUE AND CORRECT.</div>
-
-	<div class="signature center print"><p>______________________________________________
-		____________________________________________ <br />
-		Student Employee Signature  Date Supervisor Signature Date</p></div>
-
+    
 	<table class="signature center">
 		<tbody>
 			<tr>
