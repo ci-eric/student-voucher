@@ -201,19 +201,6 @@ input[type="radio"] {
 .print {
   display: none; }
 
-@media print {
-  input,
-  .calendar {
-    border-style: none; }
-
-  .button {
-    display: none; }
-
-  .notCurrent {
-    color: #000; }
-
-  .print {
-    display: block; } }
 table.signature {
   width: 831px; }
   table.signature td:nth-child(1),
@@ -280,3 +267,20 @@ input[type='submit'].btn {
   border: 1px solid black;
   border-radius: 8px;
   width: auto; }
+
+.print {
+  display: none; }
+
+@media print {
+  input,
+  .calendar {
+    border-style: none; }
+
+  .button {
+    display: none; }
+
+  .notCurrent {
+    color: #000; }
+
+  .print {
+    display: block; } }

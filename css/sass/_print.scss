@@ -1,0 +1,12 @@
+
+
+.print		{ display:none; }
+
+@media print
+{
+	input, 
+	.calendar 	{ border-style:none; }
+	.button 	{ display:none;	}
+	.notCurrent	{ color:#000; }
+	.print		{ display:block; }
+}

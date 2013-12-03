@@ -193,15 +193,7 @@ input[type="radio"] {
 .signature	{ width:900px; }
 .print		{ display:none; }
 
-@media print
-{
-	input, 
-	.calendar 	{ border-style:none; }
-	.button 	{ display:none;	}
-	.notCurrent	{ color:#000; }
-	.print		{ display:block; }
-}
-
 @import "sass/signature";
 @import "sass/payroll";
 @import "sass/input";
+@import "sass/print";
