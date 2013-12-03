@@ -201,6 +201,11 @@ input[type="radio"] {
 .print {
   display: none; }
 
+/************************************************************
+
+	signature section css
+
+ ************************************************************/
 table.signature {
   width: 831px; }
   table.signature td:nth-child(1),
@@ -213,6 +218,11 @@ table.signature {
   table.signature tr:last-child td {
     padding-top: 0; }
 
+/************************************************************
+
+	payroll information css
+
+ ************************************************************/
 .payroll {
   font-size: 12px;
   width: 953px;
@@ -239,6 +249,11 @@ table.signature {
   border-bottom: 1px solid;
   border-top: 1px solid; }
 
+/************************************************************
+
+	input css
+
+ ************************************************************/
 .week-selection input {
   width: auto; }
 @media only screen and (min-width: 1280px) {
@@ -268,6 +283,11 @@ input[type='submit'].btn {
   border-radius: 8px;
   width: auto; }
 
+/************************************************************
+
+	csss for printing
+
+ ************************************************************/
 .print {
   display: none; }
 
