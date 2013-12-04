@@ -28,6 +28,9 @@ th {
 .float-l {
   float: left; }
 
+.float-r {
+  float: right; }
+
 .left-5 {
   margin-left: 5px; }
 
@@ -226,7 +229,10 @@ table.signature {
   width: 905px;
   border: 1px solid black;
   border-bottom: 0;
-  margin-left: 136px; }
+  margin-left: 145px; }
+
+.sa:nth-child(3) {
+  margin-left: 90px; }
 
 .monthSelect, .yearSelect {
   	/************************************************************

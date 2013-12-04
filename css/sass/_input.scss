@@ -23,7 +23,13 @@
 	width: 905px;
 	border: 1px solid black;
 	border-bottom: 0;
-	margin-left: 136px;
+	margin-left: 145px;
+}
+
+.sa {
+	&:nth-child(3) {
+		margin-left: 90px;
+	}
 }
 
 %select {

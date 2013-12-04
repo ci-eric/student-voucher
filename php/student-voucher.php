@@ -338,6 +338,8 @@
 		 	Year selector creates drop down menu for current year
 		 		plus previous and next year, mostly unecessary
 
+		 	also adds the type of student worker the user is
+
 		 ************************************************************/
 		public static function createMYselector($thisYear, $selectYear, $month)
 		{
@@ -354,6 +356,34 @@
 							<option value='$thisYear' "	.($thisYear == $selectYear ? "selected='selected'" : "").">$thisYear</option>
 							<option value='"			.($thisYear+1)."' ".($thisYear+1 == $selectYear ? "selected='selected'" : "").">".($thisYear+1)."</option>
 						</select>";
+
+			switch(self::test_input($_POST['sa']))
+			{
+				case 'fsa':
+					echo 	"<input type='radio' class='sa' name='sa' value='fsa' checked='checked'>Federal Work Study Student Assistant";
+					echo 	"<input type='radio' class='sa' name='sa' value='sa'>Student Assistant";
+					echo 	"<input type='radio' class='sa' name='sa' value='bsa'>Bridge Student Assistant";
+					break;
+
+				case 'sa':
+					echo 	"<input type='radio' class='sa' name='sa' value='fsa'>Federal Work Study Student Assistant";
+					echo 	"<input type='radio' class='sa' name='sa' value='sa' checked='checked'>Student Assistant";
+					echo 	"<input type='radio' class='sa' name='sa' value='bsa'>Bridge Student Assistant";
+					break;
+
+				case 'bsa':
+					echo 	"<input type='radio' class='sa' name='sa' value='fsa'>Federal Work Study Student Assistant";
+					echo 	"<input type='radio' class='sa' name='sa' value='sa'>Student Assistant";
+					echo 	"<input type='radio' class='sa' name='sa' value='bsa' checked='checked'>Bridge Student Assistant";
+					break;
+
+				default:
+					echo 	"<input type='radio' class='sa' name='sa' value='fsa'>Federal Work Study Student Assistant";
+					echo 	"<input type='radio' class='sa' name='sa' value='sa'>Student Assistant";
+					echo 	"<input type='radio' class='sa' name='sa' value='bsa'>Bridge Student Assistant";
+					break;
+			}
+
 		}
 	}
 
