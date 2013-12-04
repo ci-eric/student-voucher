@@ -19,13 +19,27 @@
 }
 
 %select {
+	/************************************************************
+		dropdown resets
+		only use if wishing to change default arrow for creating
+			the form
+
+	border: 0 !important;
+	 -webkit-appearance: none;
+		-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: "";*/
+
 	margin: 3px 4px;
 	width: 60px;
 
-	@media only screen and (min-width: 1280px)
+	@media print 
 	{
-		position: fixed;
-		top: 75px;
+		border: 0 !important;
+		 -webkit-appearance: none;
+			-moz-appearance: none;
+		text-indent: 0.01px;
+		text-overflow: "";
 	}
 }
 
@@ -34,7 +48,6 @@
 
 	@media only screen and (min-width: 1280px)
 	{
-		left: 8px;
 	}
 }
 .yearSelect {
@@ -42,7 +55,6 @@
 
 	@media only screen and (min-width: 1280px)
 	{
-		left: 75px;
 	}
 }
 
