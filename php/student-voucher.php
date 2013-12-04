@@ -372,7 +372,15 @@
 
 	Calendar::createUser();
 	Calendar::rowSelection();
+
+	echo "<div class='month-year'>
+			MONTH/YEAR: 
+			";
+
 	Calendar::createMYselector($thisYear, $selectYear, $selectMonth);
+
+	echo"</div>";
+
 	Calendar::createTable($selectMonth, $selectYear);
 
 	echo "<input class='btn' type='submit'></form>";

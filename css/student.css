@@ -90,10 +90,6 @@ th {
 .bold {
   font-weight: bold; }
 
-.month-year {
-  margin-right: 250px;
-  margin-left: 20px; }
-
 .month {
   font-family: "Times New Roman", Times, serif;
   font-size: 16px; }
@@ -225,6 +221,13 @@ table.signature {
     top: 100px;
     width: 120px; } }
 
+.month-year {
+  padding: 20px 0 0 10px;
+  width: 905px;
+  border: 1px solid black;
+  border-bottom: 0;
+  margin-left: 136px; }
+
 .monthSelect, .yearSelect {
   	/************************************************************
   		dropdown resets
@@ -236,8 +239,7 @@ table.signature {
   		-moz-appearance: none;
   	text-indent: 0.01px;
   	text-overflow: "";*/
-  margin: 3px 4px;
-  width: 60px; }
+  width: 55px; }
   @media print {
     .monthSelect, .yearSelect {
       border: 0 !important;
@@ -245,6 +247,12 @@ table.signature {
       -moz-appearance: none;
       text-indent: 0.01px;
       text-overflow: ""; } }
+
+.monthSelect {
+  margin: 3px 0 3px 4px; }
+
+.yearSelect {
+  margin: 3px 4px 3px 0; }
 
 input[type='submit'].btn {
   border: 1px solid black;

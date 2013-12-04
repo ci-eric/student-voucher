@@ -18,6 +18,14 @@
 	}
 }
 
+.month-year { 
+	padding: 20px 0 0 10px;
+	width: 905px;
+	border: 1px solid black;
+	border-bottom: 0;
+	margin-left: 136px;
+}
+
 %select {
 	/************************************************************
 		dropdown resets
@@ -29,9 +37,7 @@
 		-moz-appearance: none;
 	text-indent: 0.01px;
 	text-overflow: "";*/
-
-	margin: 3px 4px;
-	width: 60px;
+	width: 55px;
 
 	@media print 
 	{
@@ -46,12 +52,16 @@
 .monthSelect {
 	@extend %select;
 
+	margin: 3px 0 3px 4px;
+
 	@media only screen and (min-width: 1280px)
 	{
 	}
 }
 .yearSelect {
 	@extend %select;
+
+	margin: 3px 4px 3px 0;
 
 	@media only screen and (min-width: 1280px)
 	{
