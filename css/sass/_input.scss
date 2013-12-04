@@ -37,7 +37,6 @@
 		-moz-appearance: none;
 	text-indent: 0.01px;
 	text-overflow: "";*/
-	width: 55px;
 
 	@media print 
 	{
@@ -53,6 +52,7 @@
 	@extend %select;
 
 	margin: 3px 0 3px 4px;
+	width: 90px;
 
 	@media only screen and (min-width: 1280px)
 	{
@@ -62,6 +62,7 @@
 	@extend %select;
 
 	margin: 3px 4px 3px 0;
+	width: 55px;
 
 	@media only screen and (min-width: 1280px)
 	{

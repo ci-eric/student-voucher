@@ -345,7 +345,7 @@
 
 			for ($i=1; $i<=12; $i++)
 			{
-				echo "	<option value='$i' ".($month == $i ? "selected='selected'" : "").">".date("M", mktime(0, 0, 0, $i, 1, $thisYear))."</option>";
+				echo "	<option value='$i' ".($month == $i ? "selected='selected'" : "").">".date("F", mktime(0, 0, 0, $i, 1, $thisYear))."</option>";
 			}
 
 			echo "		</select>

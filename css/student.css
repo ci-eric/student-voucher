@@ -238,8 +238,7 @@ table.signature {
   	 -webkit-appearance: none;
   		-moz-appearance: none;
   	text-indent: 0.01px;
-  	text-overflow: "";*/
-  width: 55px; }
+  	text-overflow: "";*/ }
   @media print {
     .monthSelect, .yearSelect {
       border: 0 !important;
@@ -249,10 +248,12 @@ table.signature {
       text-overflow: ""; } }
 
 .monthSelect {
-  margin: 3px 0 3px 4px; }
+  margin: 3px 0 3px 4px;
+  width: 90px; }
 
 .yearSelect {
-  margin: 3px 4px 3px 0; }
+  margin: 3px 4px 3px 0;
+  width: 55px; }
 
 input[type='submit'].btn {
   border: 1px solid black;
