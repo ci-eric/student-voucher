@@ -25,7 +25,7 @@ th {
 .smallBoxDesc {
   margin: 0 75px 0 120px; }
 
-.float-l {
+.float-l, .signature div {
   float: left; }
 
 .float-r {
@@ -168,17 +168,19 @@ input[type="radio"] {
 	signature section css
 
  ************************************************************/
-table.signature {
-  width: 831px; }
-  table.signature td:nth-child(1),
-  table.signature td:nth-child(3) {
-    padding-right: 20px; }
-  table.signature td:nth-child(2) {
-    padding-right: 50px; }
-  table.signature tr:first-child td {
-    padding-bottom: 0; }
-  table.signature tr:last-child td {
-    padding-top: 0; }
+.signature {
+  font-size: 13px;
+  margin: 16px 0 16px 220px;
+  overflow: auto; }
+  .signature div {
+    border-top: 1px solid black;
+    padding-top: 2px; }
+  .signature div:nth-child(odd) {
+    width: 280px;
+    margin-right: 20px; }
+  .signature div:nth-child(even) {
+    width: 90px;
+    margin-right: 50px; }
 
 /************************************************************
 
@@ -225,8 +227,8 @@ table.signature {
     width: 120px; } }
 
 .month-year {
-  padding: 20px 0 0 10px;
-  width: 905px;
+  padding: 20px 0 0 20px;
+  width: 895px;
   border: 1px solid black;
   border-bottom: 0;
   margin-left: 145px; }
@@ -234,7 +236,7 @@ table.signature {
 .sa {
   display: none; }
   .sa + label:nth-child(4) {
-    margin-left: 160px; }
+    margin-left: 150px; }
   .sa + label {
     display: inline-block;
     cursor: pointer;

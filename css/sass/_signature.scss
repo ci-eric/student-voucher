@@ -4,25 +4,25 @@
 
  ************************************************************/
 
-table.signature { 
-	width:831px; 
+.signature {
+	font-size: 13px;
+	margin: 16px 0 16px 220px;
+	overflow: auto;
 
-	td:nth-child(1),
-	td:nth-child(3) {
-		padding-right: 20px;
-	}
-	td:nth-child(2) {
-		padding-right: 50px;
+	& div {
+		@extend .float-l;
+
+		border-top: 1px solid black;
+		padding-top: 2px;
 	}
 
-	tr:first-child {
-		td {
-			padding-bottom: 0;
-		}
+	& div:nth-child(odd) {
+		width: 280px;
+		margin-right: 20px;
 	}
-	tr:last-child {
-		td {
-			padding-top: 0;
-		}
+
+	& div:nth-child(even) {
+		width: 90px;
+		margin-right: 50px;
 	}
 }

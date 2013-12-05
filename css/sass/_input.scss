@@ -19,8 +19,8 @@
 }
 
 .month-year { 
-	padding: 20px 0 0 10px;
-	width: 905px;
+	padding: 20px 0 0 20px;
+	width: 895px;
 	border: 1px solid black;
 	border-bottom: 0;
 	margin-left: 145px;
@@ -30,7 +30,7 @@
 	display: none;
 
 	& + label:nth-child(4) {
-		margin-left: 160px;
+		margin-left: 150px;
 	}
 
 	& + label {
