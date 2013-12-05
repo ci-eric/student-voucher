@@ -362,7 +362,7 @@
 				case 'fsa':
 					echo 	"<input id='fsa' type='radio' class='sa' name='sa' value='fsa' checked='checked'><label for='fsa'>Federal Work Study Student Assistant</label>";
 					echo 	"<input id='sa' type='radio' class='sa' name='sa' value='sa'><label for='sa'>Student Assistant</label>";
-					echo 	"<input id='fsa' type='radio' class='sa' name='sa' value='bsa'><label for='bsa'>Bridge Student Assistant</label>";
+					echo 	"<input id='bsa' type='radio' class='sa' name='sa' value='bsa'><label for='bsa'>Bridge Student Assistant</label>";
 					break;
 
 				case 'sa':
