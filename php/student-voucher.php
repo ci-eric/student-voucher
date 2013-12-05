@@ -360,27 +360,27 @@
 			switch(self::test_input($_POST['sa']))
 			{
 				case 'fsa':
-					echo 	"<input type='radio' class='sa' name='sa' value='fsa' checked='checked'>Federal Work Study Student Assistant";
-					echo 	"<input type='radio' class='sa' name='sa' value='sa'>Student Assistant";
-					echo 	"<input type='radio' class='sa' name='sa' value='bsa'>Bridge Student Assistant";
+					echo 	"<input id='fsa' type='radio' class='sa' name='sa' value='fsa' checked='checked'><label for='fsa'>Federal Work Study Student Assistant</label>";
+					echo 	"<input id='sa' type='radio' class='sa' name='sa' value='sa'><label for='sa'>Student Assistant</label>";
+					echo 	"<input id='fsa' type='radio' class='sa' name='sa' value='bsa'><label for='bsa'>Bridge Student Assistant</label>";
 					break;
 
 				case 'sa':
-					echo 	"<input type='radio' class='sa' name='sa' value='fsa'>Federal Work Study Student Assistant";
-					echo 	"<input type='radio' class='sa' name='sa' value='sa' checked='checked'>Student Assistant";
-					echo 	"<input type='radio' class='sa' name='sa' value='bsa'>Bridge Student Assistant";
+					echo 	"<input id='fsa' type='radio' class='sa' name='sa' value='fsa'><label for='fsa'>Federal Work Study Student Assistant</label>";
+					echo 	"<input id='sa' type='radio' class='sa' name='sa' value='sa' checked='checked'><label for='sa'>Student Assistant</label>";
+					echo 	"<input id='bsa' type='radio' class='sa' name='sa' value='bsa'><label for='bsa'>Bridge Student Assistant</label>";
 					break;
 
 				case 'bsa':
-					echo 	"<input type='radio' class='sa' name='sa' value='fsa'>Federal Work Study Student Assistant";
-					echo 	"<input type='radio' class='sa' name='sa' value='sa'>Student Assistant";
-					echo 	"<input type='radio' class='sa' name='sa' value='bsa' checked='checked'>Bridge Student Assistant";
+					echo 	"<input id='fsa' type='radio' class='sa' name='sa' value='fsa'><label for='fsa'>Federal Work Study Student Assistant</label>";
+					echo 	"<input id='sa' type='radio' class='sa' name='sa' value='sa'><label for='sa'>Student Assistant</label>";
+					echo 	"<input id='bsa' type='radio' class='sa' name='sa' value='bsa' checked='checked'><label for='bsa'>Bridge Student Assistant</label>";
 					break;
 
 				default:
-					echo 	"<input type='radio' class='sa' name='sa' value='fsa'>Federal Work Study Student Assistant";
-					echo 	"<input type='radio' class='sa' name='sa' value='sa'>Student Assistant";
-					echo 	"<input type='radio' class='sa' name='sa' value='bsa'>Bridge Student Assistant";
+					echo 	"<input id='fsa' type='radio' class='sa' name='sa' value='fsa'><label for='fsa'>Federal Work Study Student Assistant</label>";
+					echo 	"<input id='sa' type='radio' class='sa' name='sa' value='sa'><label for='sa'>Student Assistant</label>";
+					echo 	"<input id='bsa' type='radio' class='sa' name='sa' value='bsa'><label for='bsa'>Bridge Student Assistant</label>";
 					break;
 			}
 
