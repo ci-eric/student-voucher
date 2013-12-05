@@ -12,26 +12,13 @@
 
     <div class="certify center bold print">I CERTIFY THAT THE HOURS REPORTED ABOVE ARE TRUE AND CORRECT.</div>
 
-	<div class="signature center print"><p>______________________________________________
-		____________________________________________ <br />
-		Student Employee Signature  Date Supervisor Signature Date</p></div>
+	<div class="signature">
+		<div>Student Employee Signature</div>
+		<div>Date</div>
+		<div>Supervisor Signature</div>
+		<div>Date</div>
+	</div>
 
-	<table class="signature center">
-		<tbody>
-			<tr>
-				<td>___________________________________</td>
-				<td>___________</td>
-				<td>___________________________________</td>
-				<td>___________</td>
-			</tr>
-			<tr>
-				<td>Student Employee Signature</td>
-				<td>Date</td>
-				<td>Supervisor Signature</td>
-				<td>Date</td>
-			</tr>
-		</tbody>
-	</table>
 
 	<div class="payroll center">
 		<div class="payroll-left bold float-l">

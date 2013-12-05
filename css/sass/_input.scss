@@ -1,4 +1,8 @@
+/************************************************************
 
+	input css
+
+ ************************************************************/
 
 .week-selection {
 
@@ -14,31 +18,94 @@
 	}
 }
 
-%select {
-	margin: 3px 4px;
-	width: 60px;
+.month-year { 
+	padding: 20px 0 0 20px;
+	width: 895px;
+	border: 1px solid black;
+	border-bottom: 0;
+	margin-left: 145px;
+}
 
-	@media only screen and (min-width: 1280px)
+.sa {
+	display: none;
+
+	& + label:nth-child(4) {
+		margin-left: 150px;
+	}
+
+	& + label {
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+		padding-left: 18px;
+		margin-right: 10px;
+		font-size: 12px;
+	}
+
+	& + label:before {
+		content: "";
+		display: inline-block;
+
+		width: 12px;
+		height: 12px;
+
+		margin-right: 10px;
+		position: absolute;
+		left: 0;
+		bottom: 1px;
+		border: 1px solid black;
+	}
+
+	&:checked + label:before {
+	    content: "X";
+	    color: #000;
+	    font-size: 21px;
+	    text-align: center;
+	    line-height: 14px;
+	    text-indent: -1px;
+	}
+}
+
+%select {
+	/************************************************************
+		dropdown resets
+		only use if wishing to change default arrow for creating
+			the form
+
+	border: 0 !important;
+	 -webkit-appearance: none;
+		-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: "";*/
+
+	@media print 
 	{
-		position: fixed;
-		top: 75px;
+		border: 0 !important;
+		 -webkit-appearance: none;
+			-moz-appearance: none;
+		text-indent: 0.01px;
+		text-overflow: "";
 	}
 }
 
 .monthSelect {
 	@extend %select;
 
+	margin: 3px 0 3px 4px;
+	width: 90px;
+
 	@media only screen and (min-width: 1280px)
 	{
-		left: 8px;
 	}
 }
 .yearSelect {
 	@extend %select;
 
+	margin: 3px 4px 3px 0;
+	width: 55px;
+
 	@media only screen and (min-width: 1280px)
 	{
-		left: 75px;
 	}
 }
 

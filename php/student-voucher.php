@@ -338,6 +338,8 @@
 		 	Year selector creates drop down menu for current year
 		 		plus previous and next year, mostly unecessary
 
+		 	also adds the type of student worker the user is
+
 		 ************************************************************/
 		public static function createMYselector($thisYear, $selectYear, $month)
 		{
@@ -345,7 +347,7 @@
 
 			for ($i=1; $i<=12; $i++)
 			{
-				echo "	<option value='$i' ".($month == $i ? "selected='selected'" : "").">".date("M", mktime(0, 0, 0, $i, 1, $thisYear))."</option>";
+				echo "	<option value='$i' ".($month == $i ? "selected='selected'" : "").">".date("F", mktime(0, 0, 0, $i, 1, $thisYear))."</option>";
 			}
 
 			echo "		</select>
@@ -354,6 +356,34 @@
 							<option value='$thisYear' "	.($thisYear == $selectYear ? "selected='selected'" : "").">$thisYear</option>
 							<option value='"			.($thisYear+1)."' ".($thisYear+1 == $selectYear ? "selected='selected'" : "").">".($thisYear+1)."</option>
 						</select>";
+
+			switch(self::test_input($_POST['sa']))
+			{
+				case 'fsa':
+					echo 	"<input id='fsa' type='radio' class='sa' name='sa' value='fsa' checked='checked'><label for='fsa'>Federal Work Study Student Assistant</label>";
+					echo 	"<input id='sa' type='radio' class='sa' name='sa' value='sa'><label for='sa'>Student Assistant</label>";
+					echo 	"<input id='bsa' type='radio' class='sa' name='sa' value='bsa'><label for='bsa'>Bridge Student Assistant</label>";
+					break;
+
+				case 'sa':
+					echo 	"<input id='fsa' type='radio' class='sa' name='sa' value='fsa'><label for='fsa'>Federal Work Study Student Assistant</label>";
+					echo 	"<input id='sa' type='radio' class='sa' name='sa' value='sa' checked='checked'><label for='sa'>Student Assistant</label>";
+					echo 	"<input id='bsa' type='radio' class='sa' name='sa' value='bsa'><label for='bsa'>Bridge Student Assistant</label>";
+					break;
+
+				case 'bsa':
+					echo 	"<input id='fsa' type='radio' class='sa' name='sa' value='fsa'><label for='fsa'>Federal Work Study Student Assistant</label>";
+					echo 	"<input id='sa' type='radio' class='sa' name='sa' value='sa'><label for='sa'>Student Assistant</label>";
+					echo 	"<input id='bsa' type='radio' class='sa' name='sa' value='bsa' checked='checked'><label for='bsa'>Bridge Student Assistant</label>";
+					break;
+
+				default:
+					echo 	"<input id='fsa' type='radio' class='sa' name='sa' value='fsa'><label for='fsa'>Federal Work Study Student Assistant</label>";
+					echo 	"<input id='sa' type='radio' class='sa' name='sa' value='sa'><label for='sa'>Student Assistant</label>";
+					echo 	"<input id='bsa' type='radio' class='sa' name='sa' value='bsa'><label for='bsa'>Bridge Student Assistant</label>";
+					break;
+			}
+
 		}
 	}
 
@@ -372,7 +402,15 @@
 
 	Calendar::createUser();
 	Calendar::rowSelection();
+
+	echo "<div class='month-year'>
+			MONTH/YEAR: 
+			";
+
 	Calendar::createMYselector($thisYear, $selectYear, $selectMonth);
+
+	echo"</div>";
+
 	Calendar::createTable($selectMonth, $selectYear);
 
 	echo "<input class='btn' type='submit'></form>";
