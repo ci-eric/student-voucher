@@ -343,6 +343,12 @@
 		 ************************************************************/
 		public static function createMYselector($thisYear, $selectYear, $month)
 		{
+			echo "<div>Enter the Total hours worked for each day</div>";
+
+			echo "<div class='month-year'>
+					MONTH/YEAR: 
+					";
+
 			echo "<select class='monthSelect' name='MonthSelect'>";
 
 			for ($i=1; $i<=12; $i++)
@@ -384,6 +390,7 @@
 					break;
 			}
 
+			echo"</div>";
 		}
 	}
 
@@ -403,13 +410,9 @@
 	Calendar::createUser();
 	Calendar::rowSelection();
 
-	echo "<div class='month-year'>
-			MONTH/YEAR: 
-			";
-
 	Calendar::createMYselector($thisYear, $selectYear, $selectMonth);
 
-	echo"</div>";
+
 
 	Calendar::createTable($selectMonth, $selectYear);
 

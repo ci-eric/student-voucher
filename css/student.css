@@ -268,11 +268,12 @@ input[type="radio"] {
   		only use if wishing to change default arrow for creating
   			the form
   
-  	border: 0 !important;
-  	 -webkit-appearance: none;
-  		-moz-appearance: none;
-  	text-indent: 0.01px;
-  	text-overflow: "";*/ }
+  		 -webkit-appearance: none;
+  			-moz-appearance: none;
+  		text-indent: 0.01px;
+  		text-overflow: "";
+  	*/
+  border: 0 !important; }
   @media print {
     .monthSelect, .yearSelect {
       border: 0 !important;
@@ -284,6 +285,8 @@ input[type="radio"] {
 .monthSelect {
   margin: 3px 0 3px 4px;
   width: 90px; }
+  .monthSelect:before {
+    content: "\21d3"; }
 
 .yearSelect {
   margin: 3px 4px 3px 0;

@@ -72,11 +72,12 @@
 		only use if wishing to change default arrow for creating
 			the form
 
+		 -webkit-appearance: none;
+			-moz-appearance: none;
+		text-indent: 0.01px;
+		text-overflow: "";
+	*/
 	border: 0 !important;
-	 -webkit-appearance: none;
-		-moz-appearance: none;
-	text-indent: 0.01px;
-	text-overflow: "";*/
 
 	@media print 
 	{
@@ -93,6 +94,10 @@
 
 	margin: 3px 0 3px 4px;
 	width: 90px;
+
+	&:before {
+		content: "\21d3";
+	}
 
 	@media only screen and (min-width: 1280px)
 	{
