@@ -343,7 +343,7 @@
 		 ************************************************************/
 		public static function createMYselector($thisYear, $selectYear, $month)
 		{
-			echo "<div>Enter the Total hours worked for each day</div>";
+			echo "<div class='instruction'>Enter the Total hours worked for each day</div>";
 
 			echo "<div class='month-year'>
 					MONTH/YEAR: 

@@ -6,7 +6,10 @@
 %auto-height{ height: auto; }
 
 
-
+%border {
+	border: 1px solid black;
+	border-bottom: none;
+}
 
 %center {
 	text-align: center;
