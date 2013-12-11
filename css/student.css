@@ -355,7 +355,11 @@ input[type='submit'].btn {
   margin: 0 0 20px 125px;
   overflow: auto;
   padding: 0 5px;
-  width: 945px; }
+  width: 945px;
+  /*& > div > input[disabled] {
+  	border: none;
+  	color: #fff;
+  }*/ }
   .personal > div:nth-child(1) {
     border-right: 1px solid black;
     display: block;
@@ -396,6 +400,3 @@ input[type='submit'].btn {
     margin-right: 0; }
     .personal > div:last-child > input {
       width: 105px; }
-  .personal > div > input[disabled] {
-    border: none;
-    color: #fff; }
