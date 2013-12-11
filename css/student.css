@@ -25,23 +25,11 @@ th {
 .smallBoxDesc {
   margin: 0 75px 0 120px; }
 
-.float-l, .signature div {
-  float: left; }
-
-.float-r {
-  float: right; }
-
 .left-5 {
   margin-left: 5px; }
 
 .margin-left-10 {
   margin-left: 10px; }
-
-.autoHeight {
-  height: auto; }
-
-.italics {
-  font-style: italic; }
 
 .headerCell {
   font-size: 13px; }
@@ -153,15 +141,32 @@ input[type="radio"] {
 .assistant {
   font-size: 12px; }
 
-.center {
-  display: block;
-  margin: 0 auto; }
-
 .certify {
   width: 580px; }
 
 .signature {
   width: 900px; }
+
+/************************************************************
+
+	temporary until class inhert from placeholders
+
+ ************************************************************/
+.float-l, .signature div {
+  float: left; }
+
+.float-r {
+  float: right; }
+
+.italics {
+  font-style: italic; }
+
+.autoHeight {
+  height: auto; }
+
+.center {
+  display: block;
+  margin: 0 auto; }
 
 /************************************************************
 

@@ -21,15 +21,8 @@ th {
 	margin:0 75px 0 120px;
 }
 
-.float-l	{ float: left; }
-.float-r	{ float: right; }
-
 .left-5		{ margin-left:5px; }
 .margin-left-10 	{ margin-left:10px; }
-
-.autoHeight { height:auto; }
-
-.italics { font-style:italic; }
 
 .headerCell { font-size:13px; }
 
@@ -125,13 +118,10 @@ input[type="radio"] {
 	font-size:12px;
 }
 
-.center {
-	display:block;
-	margin:0 auto;
-}
-
 .certify	{ width:580px; }
 .signature	{ width:900px; }
+
+@import "sass/placeholders";
 
 @import "sass/signature";
 @import "sass/payroll";
