@@ -3,12 +3,9 @@ h1 {
   font-size: 22px;
   width: 510px; }
 
-table {
-  border-collapse: collapse; }
-
-.header tbody, .yearAndType tbody, .time-sheet tbody, .payroll tbody,
-.header td, .yearAndType td, .time-sheet td,
-.yearAndType tr, .time-sheet tr, th {
+.header tbody, .yearAndType tbody, .payroll tbody,
+.header td, .yearAndType td,
+.yearAndType tr, th {
   border: 1px solid; }
 
 td, input {
@@ -84,9 +81,6 @@ th {
 .month {
   font-family: "Times New Roman", Times, serif;
   font-size: 16px; }
-
-.time-sheet {
-  width: 975px; }
 
 .pad-top-20 {
   padding-top: 20px; }
