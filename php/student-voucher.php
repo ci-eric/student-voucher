@@ -190,11 +190,26 @@
 			}
 
 			echo "	<div class='personal'>
-						<input type='text' value=$name>
-						<input type='text' disabled='disabled'>
-						<input type='text' value=$dept>
-						<input type='text' value=$supr>
-						<input type='text' disabled='disabled'>
+						<div>
+							NAME (Print):
+							<input type='text' value=$name>
+						</div>
+						<div>
+							SSN#:
+							<input type='text' disabled='disabled'>
+						</div>
+						<div>
+							DEPARTMENT TITLE AND #:
+							<input type='text' value=$dept>
+						</div>
+						<div>
+							SUPERVISOR NAME and TITLE:
+							<input type='text' value=$supr>
+						</div>
+						<div>
+							HOURLY RATE:
+							<input type='text' disabled='disabled'>
+						</div>
 					</div>";
 		}
 
