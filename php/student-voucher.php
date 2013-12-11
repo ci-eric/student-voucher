@@ -189,9 +189,28 @@
 				$supr = '';
 			}
 
-			echo "	<input class='head1' type='text' value=$name>
-					<input class='head3' type='text' value=$dept>
-					<input class='head4' type='text' value=$supr>";
+			echo "	<div class='personal'>
+						<div>
+							NAME (Print):
+							<input type='text' value=$name>
+						</div>
+						<div>
+							SSN#:
+							<input type='text' disabled='disabled'>
+						</div>
+						<div>
+							DEPARTMENT TITLE AND #:
+							<input type='text' value=$dept>
+						</div>
+						<div>
+							SUPERVISOR NAME and TITLE:
+							<input type='text' value=$supr>
+						</div>
+						<div>
+							HOURLY RATE:
+							<input type='text' disabled='disabled'>
+						</div>
+					</div>";
 		}
 
 
@@ -343,6 +362,12 @@
 		 ************************************************************/
 		public static function createMYselector($thisYear, $selectYear, $month)
 		{
+			echo "<div class='instruction'>Enter the Total hours worked for each day</div>";
+
+			echo "<div class='month-year'>
+					MONTH/YEAR: 
+					";
+
 			echo "<select class='monthSelect' name='MonthSelect'>";
 
 			for ($i=1; $i<=12; $i++)
@@ -384,6 +409,7 @@
 					break;
 			}
 
+			echo"</div>";
 		}
 	}
 
@@ -403,13 +429,9 @@
 	Calendar::createUser();
 	Calendar::rowSelection();
 
-	echo "<div class='month-year'>
-			MONTH/YEAR: 
-			";
-
 	Calendar::createMYselector($thisYear, $selectYear, $selectMonth);
 
-	echo"</div>";
+
 
 	Calendar::createTable($selectMonth, $selectYear);
 

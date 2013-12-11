@@ -5,10 +5,10 @@ h1 {
 	font-size:22px; 
 	width:510px;
 }
-table { border-collapse:collapse; }
-.header tbody, .yearAndType tbody, .time-sheet tbody, .payroll tbody,
-.header td, .yearAndType td, .time-sheet td,
-.yearAndType tr, .time-sheet tr, th { border:1px solid; }
+
+.header tbody, .yearAndType tbody, .payroll tbody,
+.header td, .yearAndType td,
+.yearAndType tr, th { border:1px solid; }
 td, input {	width:47px; }
 tr { height:30px; }
 th {
@@ -21,15 +21,8 @@ th {
 	margin:0 75px 0 120px;
 }
 
-.float-l	{ float: left; }
-.float-r	{ float: right; }
-
 .left-5		{ margin-left:5px; }
 .margin-left-10 	{ margin-left:10px; }
-
-.autoHeight { height:auto; }
-
-.italics { font-style:italic; }
 
 .headerCell { font-size:13px; }
 
@@ -83,10 +76,6 @@ th 				{ vertical-align: middle; }
 	font-size:16px;
 }
 
-.time-sheet {
-	width: 975px;
-}
-
 .pad-top-20 	{ padding-top:20px; }
 .pad-left-25	{ padding-left:25px; }
 
@@ -125,15 +114,15 @@ input[type="radio"] {
 	font-size:12px;
 }
 
-.center {
-	display:block;
-	margin:0 auto;
-}
-
 .certify	{ width:580px; }
 .signature	{ width:900px; }
+
+@import "sass/placeholders";
 
 @import "sass/signature";
 @import "sass/payroll";
 @import "sass/input";
 @import "sass/print";
+@import "sass/instruction";
+@import "sass/personal";
+@import "sass/table";

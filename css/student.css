@@ -3,12 +3,9 @@ h1 {
   font-size: 22px;
   width: 510px; }
 
-table {
-  border-collapse: collapse; }
-
-.header tbody, .yearAndType tbody, .time-sheet tbody, .payroll tbody,
-.header td, .yearAndType td, .time-sheet td,
-.yearAndType tr, .time-sheet tr, th {
+.header tbody, .yearAndType tbody, .payroll tbody,
+.header td, .yearAndType td,
+.yearAndType tr, th {
   border: 1px solid; }
 
 td, input {
@@ -25,23 +22,11 @@ th {
 .smallBoxDesc {
   margin: 0 75px 0 120px; }
 
-.float-l, .signature div {
-  float: left; }
-
-.float-r {
-  float: right; }
-
 .left-5 {
   margin-left: 5px; }
 
 .margin-left-10 {
   margin-left: 10px; }
-
-.autoHeight {
-  height: auto; }
-
-.italics {
-  font-style: italic; }
 
 .headerCell {
   font-size: 13px; }
@@ -97,9 +82,6 @@ th {
   font-family: "Times New Roman", Times, serif;
   font-size: 16px; }
 
-.time-sheet {
-  width: 975px; }
-
 .pad-top-20 {
   padding-top: 20px; }
 
@@ -153,15 +135,43 @@ input[type="radio"] {
 .assistant {
   font-size: 12px; }
 
-.center {
-  display: block;
-  margin: 0 auto; }
-
 .certify {
   width: 580px; }
 
 .signature {
   width: 900px; }
+
+.signature div, .payroll > *, .personal > div:nth-child(1), .personal > div:nth-child(2), .personal > div:nth-child(3), .personal > div:nth-child(4), .personal > div:nth-child(5) {
+  float: left; }
+
+.instruction, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td {
+  border: 1px solid black; }
+
+.instruction {
+  border-bottom: none; }
+
+.instruction {
+  text-align: center;
+  display: block;
+  margin: 0 auto; }
+
+/************************************************************
+
+	temporary until class inhert from placeholders
+
+ ************************************************************/
+.float-r {
+  float: right; }
+
+.italics {
+  font-style: italic; }
+
+.autoHeight {
+  height: auto; }
+
+.center {
+  display: block;
+  margin: 0 auto; }
 
 /************************************************************
 
@@ -218,13 +228,15 @@ input[type="radio"] {
 	input css
 
  ************************************************************/
-.week-selection input {
-  width: auto; }
-@media only screen and (min-width: 1280px) {
-  .week-selection {
-    position: fixed;
-    top: 100px;
-    width: 120px; } }
+.week-selection {
+  display: none; }
+  .week-selection input {
+    width: auto; }
+  @media only screen and (min-width: 1280px) {
+    .week-selection {
+      position: fixed;
+      top: 100px;
+      width: 120px; } }
 
 .month-year {
   padding: 20px 0 0 20px;
@@ -268,11 +280,12 @@ input[type="radio"] {
   		only use if wishing to change default arrow for creating
   			the form
   
-  	border: 0 !important;
-  	 -webkit-appearance: none;
-  		-moz-appearance: none;
-  	text-indent: 0.01px;
-  	text-overflow: "";*/ }
+  		 -webkit-appearance: none;
+  			-moz-appearance: none;
+  		text-indent: 0.01px;
+  		text-overflow: "";
+  	*/
+  border: 0 !important; }
   @media print {
     .monthSelect, .yearSelect {
       border: 0 !important;
@@ -284,6 +297,8 @@ input[type="radio"] {
 .monthSelect {
   margin: 3px 0 3px 4px;
   width: 90px; }
+  .monthSelect:before {
+    content: "\21d3"; }
 
 .yearSelect {
   margin: 3px 4px 3px 0;
@@ -315,3 +330,108 @@ input[type='submit'].btn {
 
   .print {
     display: block; } }
+/************************************************************
+
+	instruction css
+
+ ************************************************************/
+.instruction {
+  margin-left: 145px;
+  width: 905px;
+  padding: 5px; }
+
+/************************************************************
+
+	personal information css
+
+ ************************************************************/
+.personal {
+  font-size: 0.8em;
+  font-weight: bold;
+  margin: 0 0 20px 125px;
+  overflow: auto;
+  padding: 0 5px;
+  width: 945px;
+  /*& > div > input[disabled] {
+  	border: none;
+  	color: #fff;
+  }*/ }
+  .personal > div:nth-child(1) {
+    border-right: 1px solid black;
+    display: block;
+    margin-right: 5px;
+    width: 190px; }
+    .personal > div:nth-child(1) > input {
+      border: none;
+      border-bottom: 1px solid black;
+      width: 180px; }
+      @media print {
+        .personal > div:nth-child(1) > input {
+          border: none;
+          background-color: white; } }
+  .personal > div:nth-child(2) {
+    border-right: 1px solid black;
+    display: block;
+    margin-right: 5px;
+    width: 150px; }
+    .personal > div:nth-child(2) > input {
+      border: none;
+      border-bottom: 1px solid black;
+      width: 140px; }
+      @media print {
+        .personal > div:nth-child(2) > input {
+          border: none;
+          background-color: white; } }
+  .personal > div:nth-child(3) {
+    border-right: 1px solid black;
+    display: block;
+    margin-right: 5px;
+    width: 200px; }
+    .personal > div:nth-child(3) > input {
+      border: none;
+      border-bottom: 1px solid black;
+      width: 190px; }
+      @media print {
+        .personal > div:nth-child(3) > input {
+          border: none;
+          background-color: white; } }
+  .personal > div:nth-child(4) {
+    border-right: 1px solid black;
+    display: block;
+    margin-right: 5px;
+    width: 270px; }
+    .personal > div:nth-child(4) > input {
+      border: none;
+      border-bottom: 1px solid black;
+      width: 260px; }
+      @media print {
+        .personal > div:nth-child(4) > input {
+          border: none;
+          background-color: white; } }
+  .personal > div:nth-child(5) {
+    border-right: 1px solid black;
+    display: block;
+    margin-right: 5px;
+    width: 110px; }
+    .personal > div:nth-child(5) > input {
+      border: none;
+      border-bottom: 1px solid black;
+      width: 100px; }
+      @media print {
+        .personal > div:nth-child(5) > input {
+          border: none;
+          background-color: white; } }
+  .personal > div:last-child {
+    border-right: none;
+    margin-right: 0; }
+    .personal > div:last-child > input {
+      width: 105px; }
+
+/************************************************************
+
+	time-sheet table css
+
+ ************************************************************/
+.time-sheet {
+  border-collapse: collapse;
+  width: 975px; }

@@ -1,0 +1,14 @@
+/************************************************************
+
+	instruction css
+
+ ************************************************************/
+
+ .instruction {
+ 	@extend %border-no-bot;
+ 	@extend %center;
+
+ 	margin-left: 145px;
+ 	width: 905px;
+ 	padding: 5px;
+ }

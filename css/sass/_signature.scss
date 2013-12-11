@@ -10,7 +10,7 @@
 	overflow: auto;
 
 	& div {
-		@extend .float-l;
+		@extend %float-l;
 
 		border-top: 1px solid black;
 		padding-top: 2px;

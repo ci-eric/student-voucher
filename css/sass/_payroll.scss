@@ -12,6 +12,10 @@ $right:		 283px;
 	font-size:12px;
 	width: $left + $center + $right + 16px; // 10px for -left padding, 2px for each border
 	height:52px;
+
+	& > * {
+		@extend %float-l;
+	}
 }
 .payroll-left {
 	width: $left;
