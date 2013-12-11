@@ -150,7 +150,7 @@ input[type="radio"] {
 .signature div, .payroll > * {
   float: left; }
 
-.instruction {
+.instruction, .personal {
   border: 1px solid black;
   border-bottom: none; }
 
@@ -341,3 +341,25 @@ input[type='submit'].btn {
   margin-left: 145px;
   width: 905px;
   padding: 5px; }
+
+/************************************************************
+
+	personal information css
+
+ ************************************************************/
+.personal {
+  margin-left: 145px;
+  /*& > input[disabled] {
+  	border: none;
+  	color: #fff;
+  }*/ }
+  .personal > input:nth-child(1) {
+    width: 190px; }
+  .personal > input:nth-child(2) {
+    width: 150px; }
+  .personal > input:nth-child(3) {
+    width: 200px; }
+  .personal > input:nth-child(4) {
+    width: 270px; }
+  .personal > input:nth-child(5) {
+    width: 120px; }

@@ -1,0 +1,26 @@
+/************************************************************
+
+	personal information css
+
+ ************************************************************/
+
+$header: 190px, 150px, 200px, 270px, 120px;
+
+
+.personal {
+	@extend %border;
+
+	margin-left: 145px;
+	//width: 905px;
+
+	@for $i from 1 to 6 {
+		& > input:nth-child(#{$i}) {
+			width: nth($header, $i);
+		}
+	}
+
+	/*& > input[disabled] {
+		border: none;
+		color: #fff;
+	}*/
+}
