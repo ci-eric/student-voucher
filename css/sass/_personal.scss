@@ -27,7 +27,14 @@ $header: 190px, 150px, 200px, 270px, 110px;
 			width: nth($header, $i);
 
 			& > input {
+				border: none;
+				border-bottom: 1px solid black;
 				width: nth($header, $i) - 10px;
+
+				@media print {
+					border: none;
+					background-color: white;
+				}
 			}
 		}
 	}

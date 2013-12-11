@@ -1,0 +1,16 @@
+/************************************************************
+
+	time-sheet table css
+
+ ************************************************************/
+
+ .time-sheet {
+ 	border-collapse: collapse;
+ 	width: 975px;
+
+ 	& tbody,
+ 	& tr,
+ 	& td {
+ 		@extend %border;
+ 	}
+ }

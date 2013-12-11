@@ -150,7 +150,7 @@ input[type="radio"] {
 .signature div, .payroll > *, .personal > div:nth-child(1), .personal > div:nth-child(2), .personal > div:nth-child(3), .personal > div:nth-child(4), .personal > div:nth-child(5) {
   float: left; }
 
-.instruction, .personal {
+.instruction, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td {
   border: 1px solid black; }
 
 .instruction {
@@ -234,13 +234,15 @@ input[type="radio"] {
 	input css
 
  ************************************************************/
-.week-selection input {
-  width: auto; }
-@media only screen and (min-width: 1280px) {
-  .week-selection {
-    position: fixed;
-    top: 100px;
-    width: 120px; } }
+.week-selection {
+  display: none; }
+  .week-selection input {
+    width: auto; }
+  @media only screen and (min-width: 1280px) {
+    .week-selection {
+      position: fixed;
+      top: 100px;
+      width: 120px; } }
 
 .month-year {
   padding: 20px 0 0 20px;
@@ -366,37 +368,76 @@ input[type='submit'].btn {
     margin-right: 5px;
     width: 190px; }
     .personal > div:nth-child(1) > input {
+      border: none;
+      border-bottom: 1px solid black;
       width: 180px; }
+      @media print {
+        .personal > div:nth-child(1) > input {
+          border: none;
+          background-color: white; } }
   .personal > div:nth-child(2) {
     border-right: 1px solid black;
     display: block;
     margin-right: 5px;
     width: 150px; }
     .personal > div:nth-child(2) > input {
+      border: none;
+      border-bottom: 1px solid black;
       width: 140px; }
+      @media print {
+        .personal > div:nth-child(2) > input {
+          border: none;
+          background-color: white; } }
   .personal > div:nth-child(3) {
     border-right: 1px solid black;
     display: block;
     margin-right: 5px;
     width: 200px; }
     .personal > div:nth-child(3) > input {
+      border: none;
+      border-bottom: 1px solid black;
       width: 190px; }
+      @media print {
+        .personal > div:nth-child(3) > input {
+          border: none;
+          background-color: white; } }
   .personal > div:nth-child(4) {
     border-right: 1px solid black;
     display: block;
     margin-right: 5px;
     width: 270px; }
     .personal > div:nth-child(4) > input {
+      border: none;
+      border-bottom: 1px solid black;
       width: 260px; }
+      @media print {
+        .personal > div:nth-child(4) > input {
+          border: none;
+          background-color: white; } }
   .personal > div:nth-child(5) {
     border-right: 1px solid black;
     display: block;
     margin-right: 5px;
     width: 110px; }
     .personal > div:nth-child(5) > input {
+      border: none;
+      border-bottom: 1px solid black;
       width: 100px; }
+      @media print {
+        .personal > div:nth-child(5) > input {
+          border: none;
+          background-color: white; } }
   .personal > div:last-child {
     border-right: none;
     margin-right: 0; }
     .personal > div:last-child > input {
       width: 105px; }
+
+/************************************************************
+
+	time-sheet table css
+
+ ************************************************************/
+.time-sheet {
+  border-collapse: collapse;
+  width: 975px; }
