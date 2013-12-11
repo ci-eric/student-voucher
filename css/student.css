@@ -108,21 +108,6 @@ th {
 .bg-lightGrey {
   background-color: #DFDFDF; }
 
-.head1 {
-  width: 190px; }
-
-.head2 {
-  width: 150px; }
-
-.head3 {
-  width: 200px; }
-
-.head4 {
-  width: 270px; }
-
-.head5 {
-  width: 120px; }
-
 input[type="radio"] {
   -webkit-appearance: checkbox;
   -moz-appearance: checkbox;
@@ -150,7 +135,7 @@ input[type="radio"] {
 .instruction {
   border-bottom: none; }
 
-.instruction {
+h1, .instruction {
   text-align: center;
   display: block;
   margin: 0 auto; }
@@ -172,6 +157,14 @@ input[type="radio"] {
 .center {
   display: block;
   margin: 0 auto; }
+
+/************************************************************
+
+	payroll information css
+
+ ************************************************************/
+h1 {
+  margin-bottom: 20px; }
 
 /************************************************************
 

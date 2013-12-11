@@ -8,6 +8,8 @@
 
 <body>
 
+	<h1>STUDENT ASSISTANT ATTENDANCE VOUCHER</h1>
+
     <?php include "student-voucher.php"; ?>
 
     <div class="certify center bold print">I CERTIFY THAT THE HOURS REPORTED ABOVE ARE TRUE AND CORRECT.</div>
