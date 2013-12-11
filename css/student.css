@@ -147,7 +147,7 @@ input[type="radio"] {
 .signature {
   width: 900px; }
 
-.payroll > * {
+.signature div, .payroll > * {
   float: left; }
 
 /************************************************************
@@ -155,9 +155,6 @@ input[type="radio"] {
 	temporary until class inhert from placeholders
 
  ************************************************************/
-.float-l, .signature div {
-  float: left; }
-
 .float-r {
   float: right; }
 
