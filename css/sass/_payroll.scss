@@ -1,0 +1,43 @@
+/************************************************************
+
+	payroll information css
+
+ ************************************************************/
+
+$left:		 620px;
+$center:	  34px;
+$right:		 283px;
+
+.payroll {
+	@extend %bold;
+	@extend %margin-l-45;
+
+	font-size:12px;
+	width: $left + $center + $right + 16px; // 10px for -left padding, 2px for each border
+	height:52px;
+
+	& > * {
+		@extend %float-l;
+	}
+}
+.payroll-left {
+	width: $left;
+	padding:0 0 0 10px;
+	border:1px solid;
+	height:52px;
+}
+.payroll-right {
+	width: $right;
+	border:1px solid;
+	height:52px;
+}
+.payroll-center {
+	background:#000;
+	width: $center;
+	border-bottom:2px solid;
+	height:52px;
+}
+.payroll-middle {
+	border-bottom:1px solid;
+	border-top:1px solid;
+}

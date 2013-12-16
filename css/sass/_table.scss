@@ -1,0 +1,25 @@
+/************************************************************
+
+	time-sheet table css
+
+ ************************************************************/
+
+ .time-sheet {
+ 	@extend %margin-l-45;
+
+ 	border-collapse: collapse;
+ 	width: 975px;
+
+ 	& tbody,
+ 	& tr,
+ 	& td {
+ 		@extend %border;
+ 	}
+
+ 	.weekly {
+ 		@extend %bold;
+ 	}
+ 	.total {
+ 		@extend %bold;
+ 	}
+ }

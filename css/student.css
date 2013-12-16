@@ -1,0 +1,431 @@
+/* CSS Document */
+h1 {
+  font-size: 22px;
+  width: 510px; }
+
+.header tbody, .yearAndType tbody, .payroll tbody,
+.header td, .yearAndType td,
+.yearAndType tr, th {
+  border: 1px solid; }
+
+td, input {
+  width: 47px; }
+
+tr {
+  height: 30px; }
+
+th {
+  width: 116px;
+  font-size: 16px;
+  height: 35px; }
+
+.smallBoxDesc {
+  margin: 0 75px 0 120px; }
+
+.left-5 {
+  margin-left: 5px; }
+
+.margin-left-10 {
+  margin-left: 10px; }
+
+.headerCell {
+  font-size: 13px; }
+
+.yearAndType,
+.yearAndType tbody,
+.yearAndType tr,
+.yearAndType .last {
+  border-bottom: none; }
+
+.height-40 {
+  height: 40px; }
+
+.yearAndType {
+  width: 917px; }
+
+.date {
+  border: 1px solid #000;
+  width: 30px;
+  height: 25px;
+  float: right;
+  margin-right: 5px;
+  margin-bottom: 0; }
+
+.hours {
+  height: 67px; }
+
+.calendar {
+  height: 23px;
+  display: block;
+  margin: 30px auto 0;
+  text-align: center; }
+
+.week {
+  font-size: 15px;
+  width: 80px; }
+
+.month,
+.weekly,
+.total,
+.date,
+th {
+  text-align: center; }
+
+td,
+th {
+  vertical-align: middle; }
+
+.month {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px; }
+
+.pad-top-20 {
+  padding-top: 20px; }
+
+.pad-left-25 {
+  padding-left: 25px; }
+
+.total {
+  width: 55px; }
+
+.totaltxt {
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 11px; }
+
+#total {
+  margin-bottom: 12px; }
+
+.input {
+  width: 60px; }
+
+.notCurrent {
+  color: #888; }
+
+.bg-lightGrey {
+  background-color: #DFDFDF; }
+
+input[type="radio"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  -ms-appearance: checkbox;
+  /* not currently supported */
+  -o-appearance: checkbox;
+  /* not currently supported */
+  width: auto; }
+
+.assistant {
+  font-size: 12px; }
+
+.signature {
+  width: 900px; }
+
+/************************************************************
+
+	temporary until class inhert from placeholders
+
+ ************************************************************/
+.float-r {
+  float: right; }
+
+.italics {
+  font-style: italic; }
+
+.autoHeight {
+  height: auto; }
+
+.signature div, .payroll > *, .personal > div:nth-child(1), .personal > div:nth-child(2), .personal > div:nth-child(3), .personal > div:nth-child(4), .personal > div:nth-child(5) {
+  float: left; }
+
+.payroll, .personal, .time-sheet .weekly, .time-sheet .total, .certify {
+  font-weight: bold; }
+
+.instruction, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td {
+  border: 1px solid black; }
+
+.instruction {
+  border-bottom: none; }
+
+h1, .instruction {
+  text-align: center;
+  display: block;
+  margin: 0 auto; }
+
+.payroll, .month-year, .instruction, .time-sheet {
+  margin-left: 45px; }
+
+/************************************************************
+
+	payroll information css
+
+ ************************************************************/
+h1 {
+  margin-bottom: 20px; }
+
+/************************************************************
+
+	signature section css
+
+ ************************************************************/
+.signature {
+  font-size: 13px;
+  margin: 16px 0 16px 120px;
+  overflow: auto; }
+  .signature div {
+    border-top: 1px solid black;
+    padding-top: 2px; }
+  .signature div:nth-child(odd) {
+    width: 280px;
+    margin-right: 20px; }
+  .signature div:nth-child(even) {
+    width: 90px;
+    margin-right: 50px; }
+
+/************************************************************
+
+	payroll information css
+
+ ************************************************************/
+.payroll {
+  font-size: 12px;
+  width: 953px;
+  height: 52px; }
+
+.payroll-left {
+  width: 620px;
+  padding: 0 0 0 10px;
+  border: 1px solid;
+  height: 52px; }
+
+.payroll-right {
+  width: 283px;
+  border: 1px solid;
+  height: 52px; }
+
+.payroll-center {
+  background: #000;
+  width: 34px;
+  border-bottom: 2px solid;
+  height: 52px; }
+
+.payroll-middle {
+  border-bottom: 1px solid;
+  border-top: 1px solid; }
+
+/************************************************************
+
+	input css
+
+ ************************************************************/
+.week-selection {
+  display: none; }
+  .week-selection input {
+    width: auto; }
+  @media only screen and (min-width: 1280px) {
+    .week-selection {
+      position: fixed;
+      top: 100px;
+      width: 120px; } }
+
+.month-year {
+  padding: 20px 0 0 20px;
+  width: 895px;
+  border: 1px solid black;
+  border-bottom: 0; }
+
+.sa {
+  display: none; }
+  .sa + label:nth-child(4) {
+    margin-left: 150px; }
+  .sa + label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 18px;
+    margin-right: 10px;
+    font-size: 12px; }
+  .sa + label:before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    border: 1px solid black; }
+  .sa:checked + label:before {
+    content: "X";
+    color: #000;
+    font-size: 21px;
+    text-align: center;
+    line-height: 14px;
+    text-indent: -1px; }
+
+.monthSelect, .yearSelect {
+  	/************************************************************
+  		dropdown resets
+  		only use if wishing to change default arrow for creating
+  			the form
+  
+  		 -webkit-appearance: none;
+  			-moz-appearance: none;
+  		text-indent: 0.01px;
+  		text-overflow: "";
+  	*/
+  border: 0 !important; }
+  @media print {
+    .monthSelect, .yearSelect {
+      border: 0 !important;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 0.01px;
+      text-overflow: ""; } }
+
+.monthSelect {
+  margin: 3px 0 3px 4px;
+  width: 90px; }
+  .monthSelect:before {
+    content: "\21d3"; }
+
+.yearSelect {
+  margin: 3px 4px 3px 0;
+  width: 55px; }
+
+input[type='submit'].btn {
+  border: 1px solid black;
+  border-radius: 8px;
+  width: auto; }
+
+/************************************************************
+
+	csss for printing
+
+ ************************************************************/
+.print {
+  display: none; }
+
+@media print {
+  input,
+  .calendar {
+    border-style: none; }
+
+  .button {
+    display: none; }
+
+  .notCurrent {
+    color: #000; }
+
+  .print {
+    display: block; } }
+/************************************************************
+
+	instruction css
+
+ ************************************************************/
+.instruction {
+  width: 905px;
+  padding: 5px; }
+
+/************************************************************
+
+	personal information css
+
+ ************************************************************/
+.personal {
+  font-size: 0.8em;
+  margin: 0 0 20px 25px;
+  overflow: auto;
+  padding: 0 5px;
+  width: 945px;
+  /*& > div > input[disabled] {
+  	border: none;
+  	color: #fff;
+  }*/ }
+  .personal > div:nth-child(1) {
+    border-right: 1px solid black;
+    display: block;
+    margin-right: 5px;
+    width: 190px; }
+    .personal > div:nth-child(1) > input {
+      border: none;
+      border-bottom: 1px solid black;
+      width: 180px; }
+      @media print {
+        .personal > div:nth-child(1) > input {
+          border: none;
+          background-color: white; } }
+  .personal > div:nth-child(2) {
+    border-right: 1px solid black;
+    display: block;
+    margin-right: 5px;
+    width: 150px; }
+    .personal > div:nth-child(2) > input {
+      border: none;
+      border-bottom: 1px solid black;
+      width: 140px; }
+      @media print {
+        .personal > div:nth-child(2) > input {
+          border: none;
+          background-color: white; } }
+  .personal > div:nth-child(3) {
+    border-right: 1px solid black;
+    display: block;
+    margin-right: 5px;
+    width: 200px; }
+    .personal > div:nth-child(3) > input {
+      border: none;
+      border-bottom: 1px solid black;
+      width: 190px; }
+      @media print {
+        .personal > div:nth-child(3) > input {
+          border: none;
+          background-color: white; } }
+  .personal > div:nth-child(4) {
+    border-right: 1px solid black;
+    display: block;
+    margin-right: 5px;
+    width: 270px; }
+    .personal > div:nth-child(4) > input {
+      border: none;
+      border-bottom: 1px solid black;
+      width: 260px; }
+      @media print {
+        .personal > div:nth-child(4) > input {
+          border: none;
+          background-color: white; } }
+  .personal > div:nth-child(5) {
+    border-right: 1px solid black;
+    display: block;
+    margin-right: 5px;
+    width: 110px; }
+    .personal > div:nth-child(5) > input {
+      border: none;
+      border-bottom: 1px solid black;
+      width: 100px; }
+      @media print {
+        .personal > div:nth-child(5) > input {
+          border: none;
+          background-color: white; } }
+  .personal > div:last-child {
+    border-right: none;
+    margin-right: 0; }
+    .personal > div:last-child > input {
+      width: 105px; }
+
+/************************************************************
+
+	time-sheet table css
+
+ ************************************************************/
+.time-sheet {
+  border-collapse: collapse;
+  width: 975px; }
+
+/************************************************************
+
+	certify css
+
+ ************************************************************/
+.certify {
+  width: 580px; }

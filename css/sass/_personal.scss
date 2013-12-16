@@ -1,0 +1,55 @@
+/************************************************************
+
+	personal information css
+
+ ************************************************************/
+
+$header: 190px, 150px, 200px, 270px, 110px;
+
+
+.personal {
+	@extend %border;
+	@extend %bold;
+
+	font-size: 0.8em;
+	margin: 0 0 20px 25px;
+	overflow: auto;
+	padding: 0 5px;
+	width: 945px;
+
+	@for $i from 1 to 6 {
+		&  > div:nth-child(#{$i}) {
+			@extend %float-l;
+
+			border-right: 1px solid black;
+			display: block;
+			margin-right: 5px;
+			width: nth($header, $i);
+
+			& > input {
+				border: none;
+				border-bottom: 1px solid black;
+				width: nth($header, $i) - 10px;
+
+				@media print {
+					border: none;
+					background-color: white;
+				}
+			}
+		}
+	}
+
+	& > div:last-child {
+		border-right: none;
+		margin-right: 0;
+
+		& > input {
+			width: nth($header, length($header)) - 5px;
+		}
+	}
+
+	/*& > div > input[disabled] {
+		border: none;
+		color: #fff;
+	}*/
+}
