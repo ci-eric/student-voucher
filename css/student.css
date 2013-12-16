@@ -75,9 +75,6 @@ td,
 th {
   vertical-align: middle; }
 
-.bold {
-  font-weight: bold; }
-
 .month {
   font-family: "Times New Roman", Times, serif;
   font-size: 16px; }
@@ -120,25 +117,8 @@ input[type="radio"] {
 .assistant {
   font-size: 12px; }
 
-.certify {
-  width: 580px; }
-
 .signature {
   width: 900px; }
-
-.signature div, .payroll > *, .personal > div:nth-child(1), .personal > div:nth-child(2), .personal > div:nth-child(3), .personal > div:nth-child(4), .personal > div:nth-child(5) {
-  float: left; }
-
-.instruction, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td {
-  border: 1px solid black; }
-
-.instruction {
-  border-bottom: none; }
-
-h1, .instruction {
-  text-align: center;
-  display: block;
-  margin: 0 auto; }
 
 /************************************************************
 
@@ -154,9 +134,25 @@ h1, .instruction {
 .autoHeight {
   height: auto; }
 
-.center {
+.signature div, .payroll > *, .personal > div:nth-child(1), .personal > div:nth-child(2), .personal > div:nth-child(3), .personal > div:nth-child(4), .personal > div:nth-child(5) {
+  float: left; }
+
+.payroll, .personal, .time-sheet .weekly, .time-sheet .total, .certify {
+  font-weight: bold; }
+
+.instruction, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td {
+  border: 1px solid black; }
+
+.instruction {
+  border-bottom: none; }
+
+h1, .instruction {
+  text-align: center;
   display: block;
   margin: 0 auto; }
+
+.payroll, .month-year, .instruction, .time-sheet {
+  margin-left: 45px; }
 
 /************************************************************
 
@@ -173,7 +169,7 @@ h1 {
  ************************************************************/
 .signature {
   font-size: 13px;
-  margin: 16px 0 16px 220px;
+  margin: 16px 0 16px 120px;
   overflow: auto; }
   .signature div {
     border-top: 1px solid black;
@@ -235,8 +231,7 @@ h1 {
   padding: 20px 0 0 20px;
   width: 895px;
   border: 1px solid black;
-  border-bottom: 0;
-  margin-left: 145px; }
+  border-bottom: 0; }
 
 .sa {
   display: none; }
@@ -329,7 +324,6 @@ input[type='submit'].btn {
 
  ************************************************************/
 .instruction {
-  margin-left: 145px;
   width: 905px;
   padding: 5px; }
 
@@ -340,8 +334,7 @@ input[type='submit'].btn {
  ************************************************************/
 .personal {
   font-size: 0.8em;
-  font-weight: bold;
-  margin: 0 0 20px 125px;
+  margin: 0 0 20px 25px;
   overflow: auto;
   padding: 0 5px;
   width: 945px;
@@ -428,3 +421,11 @@ input[type='submit'].btn {
 .time-sheet {
   border-collapse: collapse;
   width: 975px; }
+
+/************************************************************
+
+	certify css
+
+ ************************************************************/
+.certify {
+  width: 580px; }

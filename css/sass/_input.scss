@@ -20,11 +20,12 @@
 }
 
 .month-year { 
+ 	@extend %margin-l-45;
+ 	
 	padding: 20px 0 0 20px;
 	width: 895px;
 	border: 1px solid black;
 	border-bottom: 0;
-	margin-left: 145px;
 }
 
 .sa {

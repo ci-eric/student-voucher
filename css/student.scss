@@ -69,8 +69,6 @@ th 				{ text-align:center; }
 td,
 th 				{ vertical-align: middle; }
 
-.bold			{ font-weight:bold; }
-
 .month {
 	font-family:"Times New Roman", Times, serif;
 	font-size:16px;
@@ -108,7 +106,7 @@ input[type="radio"] {
 	font-size:12px;
 }
 
-.certify	{ width:580px; }
+
 .signature	{ width:900px; }
 
 @import "sass/placeholders";
@@ -121,3 +119,4 @@ input[type="radio"] {
 @import "sass/instruction";
 @import "sass/personal";
 @import "sass/table";
+@import "sass/certify";

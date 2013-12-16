@@ -1,17 +1,26 @@
+/************************************************************
+
+	temporary until class inhert from placeholders
+
+ ************************************************************/
+.float-r	{ float: right; }
+.italics 	{ font-style:italic; }
+.autoHeight { height:auto; }
+
 //placeholders
 
 %float-l	{ float: left; }
 %float-r	{ float: right; }
 %italics	{ font-style: italics; }
+%bold		{ font-weight: bold; }
 %auto-height{ height: auto; }
-
 
 %border {
 	border: 1px solid black;
 }
 %border-no-bot {
 	@extend %border;
-	
+
 	border-bottom: none;
 }
 
@@ -22,16 +31,4 @@
 	margin: 0 auto;
 }
 
-
-/************************************************************
-
-	temporary until class inhert from placeholders
-
- ************************************************************/
-.float-r	{ float: right; }
-.italics 	{ font-style:italic; }
-.autoHeight { height:auto; }
-.center {
-	display:block;
-	margin:0 auto;
-}
+%margin-l-45{ margin-left: 45px; }
