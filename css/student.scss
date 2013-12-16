@@ -69,8 +69,6 @@ th 				{ text-align:center; }
 td,
 th 				{ vertical-align: middle; }
 
-.bold			{ font-weight:bold; }
-
 .month {
 	font-family:"Times New Roman", Times, serif;
 	font-size:16px;
@@ -96,12 +94,6 @@ th 				{ vertical-align: middle; }
 
 .bg-lightGrey { background-color:#DFDFDF; }
 
-.head1 { width:190px; }
-.head2 { width:150px; }
-.head3 { width:200px; }
-.head4 { width:270px; }
-.head5 { width:120px; }
-
 input[type="radio"] {
     -webkit-appearance: checkbox;
     -moz-appearance: checkbox;
@@ -114,11 +106,12 @@ input[type="radio"] {
 	font-size:12px;
 }
 
-.certify	{ width:580px; }
+
 .signature	{ width:900px; }
 
 @import "sass/placeholders";
 
+@import "sass/header";
 @import "sass/signature";
 @import "sass/payroll";
 @import "sass/input";
@@ -126,3 +119,4 @@ input[type="radio"] {
 @import "sass/instruction";
 @import "sass/personal";
 @import "sass/table";
+@import "sass/certify";

@@ -6,9 +6,9 @@
 
  .instruction {
  	@extend %border-no-bot;
+ 	@extend %margin-l-45;
  	@extend %center;
-
- 	margin-left: 145px;
+ 	
  	width: 905px;
  	padding: 5px;
  }
