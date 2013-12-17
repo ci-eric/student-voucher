@@ -11,15 +11,79 @@
  	width: 975px;
 
  	& tbody,
- 	& tr,
- 	& td {
+ 	& tr {
  		@extend %border;
  	}
+ 	& td {
+ 		@extend %border;
+ 		@extend %v-align-center;
+ 	}
+
+ 	& thead {
+ 		@extend %bg-lightGrey;
+
+ 		th {
+ 			@extend %border;
+ 			@extend %center;
+ 			@extend %v-align-center;
+
+ 			display: table-cell;
+			font-size:16px;
+			height:35px;
+			width:116px;
+ 		}
+
+ 		th:last-child {
+			font-size:15px;
+			width:80px;
+ 		}
+ 	}
+
+	.cal-cell {
+		padding: 5px;
+
+		& > input {
+			width: 47px;
+		}
+	}
 
  	.weekly {
  		@extend %bold;
+ 		@extend %center;
+
+ 		display: table-cell;
  	}
  	.total {
  		@extend %bold;
+ 		@extend %center;
+
+ 		display: table-cell;
+ 		width: 55px;
+
+ 		& div:first-child {
+			font-size: 12px;
+			line-height:12px;
+			margin-bottom:11px;
+ 		}
+ 		& div:last-child {
+ 			margin-bottom:12px;
+ 		}
  	}
- }
+
+ 	.cal-cell-hours {
+ 		@extend %center;
+
+		height: 23px;
+		clear: both;
+ 	}
+
+ 	.cal-cell-date {
+		@extend %border;
+ 		@extend %center;
+		@extend %float-r;
+		
+		width: 30px;
+		height: 25px;
+		margin-bottom: 3px;
+	}
+}

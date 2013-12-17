@@ -14,3 +14,7 @@
 	.notCurrent	{ color:#000; }
 	.print		{ display:block; }
 }
+
+.payroll-center {
+  -webkit-print-color-adjust: exact;
+}

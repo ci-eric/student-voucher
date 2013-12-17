@@ -9,11 +9,13 @@
 
 //placeholders
 
-%float-l	{ float: left; }
-%float-r	{ float: right; }
-%italics	{ font-style: italics; }
-%bold		{ font-weight: bold; }
-%auto-height{ height: auto; }
+%float-l		{ float: left; }
+%float-r		{ float: right; }
+%italics		{ font-style: italic; }
+%bold			{ font-weight: bold; }
+%auto-height	{ height: auto; }
+%bg-lightGrey 	{ background-color: #DFDFDF; }
+%v-align-center { vertical-align: center; }
 
 %border {
 	border: 1px solid black;

@@ -265,8 +265,8 @@
 
 				for ($i = 0; $i < 7; $i++)
 				{
-					echo "	<td class='hours'>
-								<div class='date'>
+					echo "	<td class='cal-cell'>
+								<div class='cal-cell-date'>
 									$currDay
 								</div>";
 
@@ -274,10 +274,10 @@
 					{
 						$weeklyHours += $hours = self::test_input($_POST['Table'][$j][$i]);
 
-						echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='$hours'>";
+						echo "	<input name='Table[$j][$i]' class='cal-cell-hours' type='text' value='$hours'>";
 					}
 					else
-						echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='0'>";
+						echo "	<input name='Table[$j][$i]' class='cal-cell-hours' type='text' value='0'>";
 
 					echo "</td>";
 

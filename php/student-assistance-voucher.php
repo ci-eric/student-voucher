@@ -8,33 +8,37 @@
 
 <body>
 
-	<h1>STUDENT ASSISTANT ATTENDANCE VOUCHER</h1>
+	<div id="page-wrapper">
 
-    <?php include "student-voucher.php"; ?>
+		<h1>STUDENT ASSISTANT ATTENDANCE VOUCHER</h1>
 
-    <div class="certify center bold print">I CERTIFY THAT THE HOURS REPORTED ABOVE ARE TRUE AND CORRECT.</div>
+	    <?php include "student-voucher.php"; ?>
 
-	<div class="signature">
-		<div>Student Employee Signature</div>
-		<div>Date</div>
-		<div>Supervisor Signature</div>
-		<div>Date</div>
-	</div>
+	    <div class="certify center bold print">I CERTIFY THAT THE HOURS REPORTED ABOVE ARE TRUE AND CORRECT.</div>
 
-
-	<div class="payroll center">
-		<div class="payroll-left bold">
-		*When school is in session, student assistants may work up to but not in excess of 20 hours per week<br />
-		*When school is NOT in session, student assistants may work up to a maximum of 40 hours per week<br />
-		 - but SHALL NOT be scheduled to work overtime.
+		<div class="signature">
+			<div>Student Employee Signature</div>
+			<div>Date</div>
+			<div>Supervisor Signature</div>
+			<div>Date</div>
 		</div>
-		<div class="payroll-center">
+
+
+		<div class="payroll center">
+			<div class="payroll-left bold">
+			*When school is in session, student assistants may work up to but not in excess of 20 hours per week<br />
+			*When school is NOT in session, student assistants may work up to a maximum of 40 hours per week<br />
+			 - but SHALL NOT be scheduled to work overtime.
+			</div>
+			<div class="payroll-center">
+			</div>
+			<div class="payroll-right bold">
+			    <div class="bg-lightGrey pad-left-25">FOR PAYROLL SERVICES USE ONLY</div>
+			    <div class="payroll-middle pad-left-25">Position #:</div>
+			    <div class="pad-left-25">Department:</div>
+			</div>
 		</div>
-		<div class="payroll-right bold">
-		    <div class="bg-lightGrey pad-left-25">FOR PAYROLL SERVICES USE ONLY</div>
-		    <div class="payroll-middle pad-left-25">Position #:</div>
-		    <div class="pad-left-25">Department:</div>
-		</div>
+
 	</div>
 </body>
 </html>

@@ -1,125 +1,4 @@
 /* CSS Document */
-h1 {
-  font-size: 22px;
-  width: 510px; }
-
-.header tbody, .yearAndType tbody, .payroll tbody,
-.header td, .yearAndType td,
-.yearAndType tr, th {
-  border: 1px solid; }
-
-td, input {
-  width: 47px; }
-
-tr {
-  height: 30px; }
-
-th {
-  width: 116px;
-  font-size: 16px;
-  height: 35px; }
-
-.smallBoxDesc {
-  margin: 0 75px 0 120px; }
-
-.left-5 {
-  margin-left: 5px; }
-
-.margin-left-10 {
-  margin-left: 10px; }
-
-.headerCell {
-  font-size: 13px; }
-
-.yearAndType,
-.yearAndType tbody,
-.yearAndType tr,
-.yearAndType .last {
-  border-bottom: none; }
-
-.height-40 {
-  height: 40px; }
-
-.yearAndType {
-  width: 917px; }
-
-.date {
-  border: 1px solid #000;
-  width: 30px;
-  height: 25px;
-  float: right;
-  margin-right: 5px;
-  margin-bottom: 0; }
-
-.hours {
-  height: 67px; }
-
-.calendar {
-  height: 23px;
-  display: block;
-  margin: 30px auto 0;
-  text-align: center; }
-
-.week {
-  font-size: 15px;
-  width: 80px; }
-
-.month,
-.weekly,
-.total,
-.date,
-th {
-  text-align: center; }
-
-td,
-th {
-  vertical-align: middle; }
-
-.month {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px; }
-
-.pad-top-20 {
-  padding-top: 20px; }
-
-.pad-left-25 {
-  padding-left: 25px; }
-
-.total {
-  width: 55px; }
-
-.totaltxt {
-  font-size: 12px;
-  line-height: 12px;
-  margin-bottom: 11px; }
-
-#total {
-  margin-bottom: 12px; }
-
-.input {
-  width: 60px; }
-
-.notCurrent {
-  color: #888; }
-
-.bg-lightGrey {
-  background-color: #DFDFDF; }
-
-input[type="radio"] {
-  -webkit-appearance: checkbox;
-  -moz-appearance: checkbox;
-  -ms-appearance: checkbox;
-  /* not currently supported */
-  -o-appearance: checkbox;
-  /* not currently supported */
-  width: auto; }
-
-.assistant {
-  font-size: 12px; }
-
-.signature {
-  width: 900px; }
-
 /************************************************************
 
 	temporary until class inhert from placeholders
@@ -137,16 +16,25 @@ input[type="radio"] {
 .signature div, .payroll > *, .personal > div:nth-child(1), .personal > div:nth-child(2), .personal > div:nth-child(3), .personal > div:nth-child(4), .personal > div:nth-child(5) {
   float: left; }
 
+.time-sheet .cal-cell-date {
+  float: right; }
+
 .payroll, .personal, .time-sheet .weekly, .time-sheet .total, .certify {
   font-weight: bold; }
 
-.instruction, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td {
+.payroll-right > div:first-child, .time-sheet thead {
+  background-color: #DFDFDF; }
+
+.time-sheet td, .time-sheet thead th {
+  vertical-align: center; }
+
+.instruction, .payroll-left, .payroll-right, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td, .time-sheet thead th, .time-sheet .cal-cell-date {
   border: 1px solid black; }
 
 .instruction {
   border-bottom: none; }
 
-h1, .instruction {
+h1, .instruction, .time-sheet thead th, .time-sheet .weekly, .time-sheet .total, .time-sheet .cal-cell-hours, .time-sheet .cal-cell-date {
   text-align: center;
   display: block;
   margin: 0 auto; }
@@ -154,13 +42,19 @@ h1, .instruction {
 .payroll, .month-year, .instruction, .time-sheet {
   margin-left: 45px; }
 
+#page-wrapper {
+  width: 1050px;
+  margin: 0 auto; }
+
 /************************************************************
 
 	payroll information css
 
  ************************************************************/
 h1 {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-size: 22px;
+  width: 510px; }
 
 /************************************************************
 
@@ -194,13 +88,16 @@ h1 {
 .payroll-left {
   width: 620px;
   padding: 0 0 0 10px;
-  border: 1px solid;
   height: 52px; }
 
 .payroll-right {
   width: 283px;
-  border: 1px solid;
   height: 52px; }
+  .payroll-right > * {
+    padding-left: 25px;
+    border-bottom: 1px solid black; }
+  .payroll-right > div:last-child {
+    border: none; }
 
 .payroll-center {
   background: #000;
@@ -208,9 +105,8 @@ h1 {
   border-bottom: 2px solid;
   height: 52px; }
 
-.payroll-middle {
-  border-bottom: 1px solid;
-  border-top: 1px solid; }
+.payroll-center {
+  -webkit-print-color-adjust: exact; }
 
 /************************************************************
 
@@ -318,6 +214,9 @@ input[type='submit'].btn {
 
   .print {
     display: block; } }
+.payroll-center {
+  -webkit-print-color-adjust: exact; }
+
 /************************************************************
 
 	instruction css
@@ -421,6 +320,36 @@ input[type='submit'].btn {
 .time-sheet {
   border-collapse: collapse;
   width: 975px; }
+  .time-sheet thead th {
+    display: table-cell;
+    font-size: 16px;
+    height: 35px;
+    width: 116px; }
+  .time-sheet thead th:last-child {
+    font-size: 15px;
+    width: 80px; }
+  .time-sheet .cal-cell {
+    padding: 5px; }
+    .time-sheet .cal-cell > input {
+      width: 47px; }
+  .time-sheet .weekly {
+    display: table-cell; }
+  .time-sheet .total {
+    display: table-cell;
+    width: 55px; }
+    .time-sheet .total div:first-child {
+      font-size: 12px;
+      line-height: 12px;
+      margin-bottom: 11px; }
+    .time-sheet .total div:last-child {
+      margin-bottom: 12px; }
+  .time-sheet .cal-cell-hours {
+    height: 23px;
+    clear: both; }
+  .time-sheet .cal-cell-date {
+    width: 30px;
+    height: 25px;
+    margin-bottom: 3px; }
 
 /************************************************************
 
@@ -429,3 +358,9 @@ input[type='submit'].btn {
  ************************************************************/
 .certify {
   width: 580px; }
+
+/************************************************************
+
+	date css
+
+ ************************************************************/
