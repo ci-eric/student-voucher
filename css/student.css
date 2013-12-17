@@ -20,13 +20,10 @@
 .instruction {
   border-bottom: none; }
 
-h1, .instruction, .time-sheet thead th, .time-sheet .weekly, .time-sheet .cal-cell-hours, .time-sheet .cal-cell-date, .total, .certify {
+h1, .payroll, .month-year, .instruction, .time-sheet thead th, .time-sheet .weekly, .time-sheet .cal-cell-hours, .time-sheet .cal-cell-date, .calendar, .total, .certify {
   text-align: center;
   display: block;
   margin: 0 auto; }
-
-.payroll, .month-year, .instruction, .time-sheet {
-  margin-left: 45px; }
 
 #page-wrapper {
   width: 1050px;
@@ -49,8 +46,9 @@ h1 {
  ************************************************************/
 .signature {
   font-size: 13px;
-  margin: 16px 0 16px 120px;
-  overflow: auto; }
+  margin: 16px auto 16px;
+  overflow: auto;
+  width: 880px; }
   .signature div {
     border-top: 1px solid black;
     padding-top: 2px; }
@@ -328,9 +326,17 @@ input[type='submit'].btn {
     height: 25px;
     margin-bottom: 3px; }
 
+.calendar {
+  position: relative;
+  width: 917px; }
+
 .total {
-  height: 70px;
-  width: 55px; }
+  height: 69px;
+  width: 55px;
+  position: absolute;
+  right: -55px;
+  bottom: 0;
+  border-left: none; }
   .total div:first-child {
     font-size: 12px;
     line-height: 12px;

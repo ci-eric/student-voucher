@@ -5,7 +5,6 @@
  ************************************************************/
 
  .time-sheet {
- 	@extend %margin-l-45;
 
  	border-collapse: collapse;
  	width: 917px;
@@ -73,14 +72,26 @@
 	}
 }
 
+.calendar {
+	@extend %center;
+
+	position: relative;
+	width: 917px;
+}
+
 .total {
  		@extend %bold;
  		@extend %center;
  		@extend %border;
 
  		//display: table-cell;
- 		height: 70px;
+ 		height: 69px;
  		width: 55px;
+
+ 		position: absolute;
+ 		right: -55px;
+ 		bottom: 0;
+ 		border-left: none;
 
  		& div:first-child {
 			font-size: 12px;
