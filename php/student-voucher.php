@@ -297,16 +297,18 @@
 
 				if ($j == $weeks)
 				{
-					echo "	<td class='total bold'>
+					echo "</tbody></table>";
+
+					echo "	<div class='total'>
 				            	<div class='totaltxt'>TOTAL HOURS</div>
 				            	<div id='total'>$totalHours</div>
-				            </td>";
+				            </div>";
 				}
-
-				echo "</tr>";
+				else
+				{
+					echo "</tr>";
+				}
 			}
-
-			echo "</tbody></table>";
 		}
 
 

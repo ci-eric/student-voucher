@@ -8,7 +8,7 @@
  	@extend %margin-l-45;
 
  	border-collapse: collapse;
- 	width: 975px;
+ 	width: 917px;
 
  	& tbody,
  	& tr {
@@ -53,22 +53,7 @@
 
  		display: table-cell;
  	}
- 	.total {
- 		@extend %bold;
- 		@extend %center;
-
- 		display: table-cell;
- 		width: 55px;
-
- 		& div:first-child {
-			font-size: 12px;
-			line-height:12px;
-			margin-bottom:11px;
- 		}
- 		& div:last-child {
- 			margin-bottom:12px;
- 		}
- 	}
+ 	
 
  	.cal-cell-hours {
  		@extend %center;
@@ -87,3 +72,22 @@
 		margin-bottom: 3px;
 	}
 }
+
+.total {
+ 		@extend %bold;
+ 		@extend %center;
+ 		@extend %border;
+
+ 		//display: table-cell;
+ 		height: 70px;
+ 		width: 55px;
+
+ 		& div:first-child {
+			font-size: 12px;
+			line-height:12px;
+			margin-bottom:11px;
+ 		}
+ 		& div:last-child {
+ 			margin-bottom:12px;
+ 		}
+ 	}

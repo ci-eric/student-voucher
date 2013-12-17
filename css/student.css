@@ -5,7 +5,7 @@
 .time-sheet .cal-cell-date {
   float: right; }
 
-.payroll, .personal, .time-sheet .weekly, .time-sheet .total, .certify {
+.payroll, .personal, .time-sheet .weekly, .total, .certify {
   font-weight: bold; }
 
 .payroll-right > div:first-child, .time-sheet thead {
@@ -14,13 +14,13 @@
 .time-sheet td, .time-sheet thead th {
   vertical-align: center; }
 
-.instruction, .payroll-left, .payroll-right, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td, .time-sheet thead th, .time-sheet .cal-cell-date {
+.instruction, .payroll-left, .payroll-right, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td, .time-sheet thead th, .time-sheet .cal-cell-date, .total {
   border: 1px solid black; }
 
 .instruction {
   border-bottom: none; }
 
-h1, .instruction, .time-sheet thead th, .time-sheet .weekly, .time-sheet .total, .time-sheet .cal-cell-hours, .time-sheet .cal-cell-date, .certify {
+h1, .instruction, .time-sheet thead th, .time-sheet .weekly, .time-sheet .cal-cell-hours, .time-sheet .cal-cell-date, .total, .certify {
   text-align: center;
   display: block;
   margin: 0 auto; }
@@ -305,7 +305,7 @@ input[type='submit'].btn {
  ************************************************************/
 .time-sheet {
   border-collapse: collapse;
-  width: 975px; }
+  width: 917px; }
   .time-sheet thead th {
     display: table-cell;
     font-size: 16px;
@@ -320,15 +320,6 @@ input[type='submit'].btn {
       width: 47px; }
   .time-sheet .weekly {
     display: table-cell; }
-  .time-sheet .total {
-    display: table-cell;
-    width: 55px; }
-    .time-sheet .total div:first-child {
-      font-size: 12px;
-      line-height: 12px;
-      margin-bottom: 11px; }
-    .time-sheet .total div:last-child {
-      margin-bottom: 12px; }
   .time-sheet .cal-cell-hours {
     height: 23px;
     clear: both; }
@@ -336,6 +327,16 @@ input[type='submit'].btn {
     width: 30px;
     height: 25px;
     margin-bottom: 3px; }
+
+.total {
+  height: 70px;
+  width: 55px; }
+  .total div:first-child {
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 11px; }
+  .total div:last-child {
+    margin-bottom: 12px; }
 
 /************************************************************
 
