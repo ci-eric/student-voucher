@@ -242,7 +242,8 @@
 			$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, $year));
 			$weeks = self::getWeeksofCalendar($currDay, $daysInCurrMonth, $currMonth, $month, $year);
 
-			echo "<table class='time-sheet'>";
+			echo "	<div class='calendar'>
+					<table class='time-sheet'>";
 			echo "	<thead>
 				        <tr>
 				            <th>SUNDAY</th>
@@ -297,16 +298,20 @@
 
 				if ($j == $weeks)
 				{
-					echo "	<td class='total bold'>
+					echo "</tbody></table>";
+
+					echo "	<div class='total'>
 				            	<div class='totaltxt'>TOTAL HOURS</div>
 				            	<div id='total'>$totalHours</div>
-				            </td>";
+				            </div>";
 				}
-
-				echo "</tr>";
+				else
+				{
+					echo "</tr>";
+				}
 			}
 
-			echo "</tbody></table>";
+			echo "</div>";
 		}
 
 

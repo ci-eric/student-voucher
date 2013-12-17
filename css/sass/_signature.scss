@@ -6,8 +6,9 @@
 
 .signature {
 	font-size: 13px;
-	margin: 16px 0 16px 120px;
+	margin: 16px auto 16px;
 	overflow: auto;
+	width: 880px;
 
 	& div {
 		@extend %float-l;

@@ -10,7 +10,7 @@ $right:		 283px;
 
 .payroll {
 	@extend %bold;
-	@extend %margin-l-45;
+	@extend %center;
 
 	font-size:12px;
 	width: $left + $center + $right + 16px; // 10px for -left padding, 2px for each border
