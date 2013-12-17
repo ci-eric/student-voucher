@@ -21,23 +21,34 @@ $right:		 283px;
 	}
 }
 .payroll-left {
+	@extend %border;
+	
 	width: $left;
 	padding:0 0 0 10px;
-	border:1px solid;
 	height:52px;
 }
 .payroll-right {
+	@extend %border;
+	
 	width: $right;
-	border:1px solid;
 	height:52px;
+
+	& > * {
+		padding-left: 25px;
+		border-bottom: 1px solid black;
+	}
+
+	& > div:first-child {
+ 		@extend %bg-lightGrey;
+	}
+
+	& > div:last-child {
+		border: none;
+	}
 }
 .payroll-center {
 	background:#000;
 	width: $center;
 	border-bottom:2px solid;
 	height:52px;
-}
-.payroll-middle {
-	border-bottom:1px solid;
-	border-top:1px solid;
 }

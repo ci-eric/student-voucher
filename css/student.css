@@ -1,8 +1,4 @@
 /* CSS Document */
-h1 {
-  font-size: 22px;
-  width: 510px; }
-
 .header tbody, .yearAndType tbody, .payroll tbody,
 .header td, .yearAndType td,
 .yearAndType tr, th {
@@ -18,38 +14,6 @@ th {
   width: 116px;
   font-size: 16px;
   height: 35px; }
-
-.smallBoxDesc {
-  margin: 0 75px 0 120px; }
-
-.left-5 {
-  margin-left: 5px; }
-
-.margin-left-10 {
-  margin-left: 10px; }
-
-.headerCell {
-  font-size: 13px; }
-
-.yearAndType,
-.yearAndType tbody,
-.yearAndType tr,
-.yearAndType .last {
-  border-bottom: none; }
-
-.height-40 {
-  height: 40px; }
-
-.yearAndType {
-  width: 917px; }
-
-.date {
-  border: 1px solid #000;
-  width: 30px;
-  height: 25px;
-  float: right;
-  margin-right: 5px;
-  margin-bottom: 0; }
 
 .hours {
   height: 67px; }
@@ -67,17 +31,12 @@ th {
 .month,
 .weekly,
 .total,
-.date,
-th {
+.date {
   text-align: center; }
 
 td,
 th {
   vertical-align: middle; }
-
-.month {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px; }
 
 .pad-top-20 {
   padding-top: 20px; }
@@ -99,12 +58,6 @@ th {
 .input {
   width: 60px; }
 
-.notCurrent {
-  color: #888; }
-
-.bg-lightGrey {
-  background-color: #DFDFDF; }
-
 input[type="radio"] {
   -webkit-appearance: checkbox;
   -moz-appearance: checkbox;
@@ -113,12 +66,6 @@ input[type="radio"] {
   -o-appearance: checkbox;
   /* not currently supported */
   width: auto; }
-
-.assistant {
-  font-size: 12px; }
-
-.signature {
-  width: 900px; }
 
 /************************************************************
 
@@ -137,16 +84,22 @@ input[type="radio"] {
 .signature div, .payroll > *, .personal > div:nth-child(1), .personal > div:nth-child(2), .personal > div:nth-child(3), .personal > div:nth-child(4), .personal > div:nth-child(5) {
   float: left; }
 
+.date {
+  float: right; }
+
 .payroll, .personal, .time-sheet .weekly, .time-sheet .total, .certify {
   font-weight: bold; }
 
-.instruction, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td {
+.payroll-right > div:first-child, .time-sheet thead {
+  background-color: #DFDFDF; }
+
+.instruction, .payroll-left, .payroll-right, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td, .date {
   border: 1px solid black; }
 
 .instruction {
   border-bottom: none; }
 
-h1, .instruction {
+h1, .instruction, .time-sheet thead th {
   text-align: center;
   display: block;
   margin: 0 auto; }
@@ -160,7 +113,9 @@ h1, .instruction {
 
  ************************************************************/
 h1 {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-size: 22px;
+  width: 510px; }
 
 /************************************************************
 
@@ -194,23 +149,22 @@ h1 {
 .payroll-left {
   width: 620px;
   padding: 0 0 0 10px;
-  border: 1px solid;
   height: 52px; }
 
 .payroll-right {
   width: 283px;
-  border: 1px solid;
   height: 52px; }
+  .payroll-right > * {
+    padding-left: 25px;
+    border-bottom: 1px solid black; }
+  .payroll-right > div:last-child {
+    border: none; }
 
 .payroll-center {
   background: #000;
   width: 34px;
   border-bottom: 2px solid;
   height: 52px; }
-
-.payroll-middle {
-  border-bottom: 1px solid;
-  border-top: 1px solid; }
 
 /************************************************************
 
@@ -421,6 +375,9 @@ input[type='submit'].btn {
 .time-sheet {
   border-collapse: collapse;
   width: 975px; }
+  .time-sheet thead th {
+    display: table-cell;
+    vertical-align: middle; }
 
 /************************************************************
 
@@ -429,3 +386,14 @@ input[type='submit'].btn {
  ************************************************************/
 .certify {
   width: 580px; }
+
+/************************************************************
+
+	date css
+
+ ************************************************************/
+.date {
+  width: 30px;
+  height: 25px;
+  margin-right: 5px;
+  margin-bottom: 0; }

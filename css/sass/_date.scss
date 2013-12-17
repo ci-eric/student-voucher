@@ -1,13 +1,15 @@
 /************************************************************
 
-	payroll information css
+	date css
 
  ************************************************************/
 
-h1 {
-	@extend %center;
-
-	margin-bottom: 20px;
-	font-size:22px; 
-	width:510px;
+.date{
+	@extend %float-r;
+	@extend %border;
+	
+	width:30px;
+	height:25px;
+	margin-right:5px;
+	margin-bottom:0;
 }

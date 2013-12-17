@@ -1,11 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-h1 { 
-	font-size:22px; 
-	width:510px;
-}
-
 .header tbody, .yearAndType tbody, .payroll tbody,
 .header td, .yearAndType td,
 .yearAndType tr, th { border:1px solid; }
@@ -16,38 +11,11 @@ th {
 	font-size:16px;
 	height:35px;
 }
-
-.smallBoxDesc {
-	margin:0 75px 0 120px;
-}
-
-.left-5		{ margin-left:5px; }
-.margin-left-10 	{ margin-left:10px; }
-
-.headerCell { font-size:13px; }
-
-.yearAndType,
-.yearAndType tbody,
-.yearAndType tr,
-.yearAndType .last {
-	border-bottom:none;
-}
-
-.height-40	{ height:40px; }
-
-.yearAndType { width:917px; }
-
-.date{
-	border:1px solid #000;
-	width:30px;
-	height:25px;
-	float:right;
-	margin-right:5px;
-	margin-bottom:0;
-}
 .hours{
 	height:67px;
 }
+
+
 
 .calendar {
 	height:23px;
@@ -56,23 +24,24 @@ th {
 	text-align:center;
 }
 
+
+
 .week {
 	font-size:15px;
 	width:80px;
 }
+
+
 .month,
 .weekly, 
 .total, 
-.date,
-th 				{ text-align:center; }
+.date				{ text-align:center; }
 
 td,
 th 				{ vertical-align: middle; }
 
-.month {
-	font-family:"Times New Roman", Times, serif;
-	font-size:16px;
-}
+
+
 
 .pad-top-20 	{ padding-top:20px; }
 .pad-left-25	{ padding-left:25px; }
@@ -90,9 +59,6 @@ th 				{ vertical-align: middle; }
 .input {
 	width:60px;
 }
-.notCurrent { color:#888; }
-
-.bg-lightGrey { background-color:#DFDFDF; }
 
 input[type="radio"] {
     -webkit-appearance: checkbox;
@@ -102,12 +68,7 @@ input[type="radio"] {
 	width:auto;
 }
 
-.assistant { 
-	font-size:12px;
-}
 
-
-.signature	{ width:900px; }
 
 @import "sass/placeholders";
 
@@ -120,3 +81,4 @@ input[type="radio"] {
 @import "sass/personal";
 @import "sass/table";
 @import "sass/certify";
+@import "sass/date";

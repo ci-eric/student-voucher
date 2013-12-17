@@ -16,6 +16,17 @@
  		@extend %border;
  	}
 
+ 	& thead {
+ 		@extend %bg-lightGrey;
+
+ 		th {
+ 			@extend %center;
+
+ 			display: table-cell;
+ 			vertical-align: middle;
+ 		}
+ 	}
+
  	.weekly {
  		@extend %bold;
  	}
