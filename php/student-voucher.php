@@ -242,9 +242,9 @@
 			$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, $year));
 			$weeks = self::getWeeksofCalendar($currDay, $daysInCurrMonth, $currMonth, $month, $year);
 
-			echo "<table class='time-sheet center'>";
+			echo "<table class='time-sheet'>";
 			echo "	<thead>
-				        <tr class='bg-lightGrey'>
+				        <tr>
 				            <th>SUNDAY</th>
 				            <th>MONDAY</th>
 				            <th>TUESDAY</th>
@@ -252,7 +252,7 @@
 				            <th>THURSDAY</th>
 				            <th>FRIDAY</th>
 				            <th>SATURDAY</th>
-				            <th class='week'>WEEKLY HOURS</th>
+				            <th>WEEKLY HOURS</th>
 				        </tr>
 				    </thead>";
 			echo "<tbody>";

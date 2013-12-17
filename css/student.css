@@ -1,18 +1,4 @@
 /* CSS Document */
-/************************************************************
-
-	temporary until class inhert from placeholders
-
- ************************************************************/
-.float-r {
-  float: right; }
-
-.italics {
-  font-style: italic; }
-
-.autoHeight {
-  height: auto; }
-
 .signature div, .payroll > *, .personal > div:nth-child(1), .personal > div:nth-child(2), .personal > div:nth-child(3), .personal > div:nth-child(4), .personal > div:nth-child(5) {
   float: left; }
 
@@ -34,7 +20,7 @@
 .instruction {
   border-bottom: none; }
 
-h1, .instruction, .time-sheet thead th, .time-sheet .weekly, .time-sheet .total, .time-sheet .cal-cell-hours, .time-sheet .cal-cell-date {
+h1, .instruction, .time-sheet thead th, .time-sheet .weekly, .time-sheet .total, .time-sheet .cal-cell-hours, .time-sheet .cal-cell-date, .certify {
   text-align: center;
   display: block;
   margin: 0 auto; }
