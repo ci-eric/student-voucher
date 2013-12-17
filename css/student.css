@@ -42,6 +42,10 @@ h1, .instruction, .time-sheet thead th, .time-sheet .weekly, .time-sheet .total,
 .payroll, .month-year, .instruction, .time-sheet {
   margin-left: 45px; }
 
+#page-wrapper {
+  width: 1050px;
+  margin: 0 auto; }
+
 /************************************************************
 
 	payroll information css

@@ -3,6 +3,11 @@
 
 @import "sass/placeholders";
 
+#page-wrapper {
+	width: 1050px;
+	margin: 0 auto;
+}
+
 @import "sass/header";
 @import "sass/signature";
 @import "sass/payroll";
