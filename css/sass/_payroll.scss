@@ -47,8 +47,13 @@ $right:		 283px;
 	}
 }
 .payroll-center {
+	@extend .payroll-center;
 	background:#000;
 	width: $center;
 	border-bottom:2px solid;
 	height:52px;
+}
+
+.payroll-center {
+  -webkit-print-color-adjust: exact;
 }

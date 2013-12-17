@@ -1,12 +1,4 @@
 /* CSS Document */
-.totaltxt {
-  font-size: 12px;
-  line-height: 12px;
-  margin-bottom: 11px; }
-
-#total {
-  margin-bottom: 12px; }
-
 /************************************************************
 
 	temporary until class inhert from placeholders
@@ -24,7 +16,7 @@
 .signature div, .payroll > *, .personal > div:nth-child(1), .personal > div:nth-child(2), .personal > div:nth-child(3), .personal > div:nth-child(4), .personal > div:nth-child(5) {
   float: left; }
 
-.time-sheet .date, .date {
+.time-sheet .cal-cell-date {
   float: right; }
 
 .payroll, .personal, .time-sheet .weekly, .time-sheet .total, .certify {
@@ -36,13 +28,13 @@
 .time-sheet td, .time-sheet thead th {
   vertical-align: center; }
 
-.instruction, .payroll-left, .payroll-right, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td, .time-sheet thead th, .time-sheet .date, .date {
+.instruction, .payroll-left, .payroll-right, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td, .time-sheet thead th, .time-sheet .cal-cell-date {
   border: 1px solid black; }
 
 .instruction {
   border-bottom: none; }
 
-h1, .instruction, .time-sheet thead th, .time-sheet .weekly, .time-sheet .total, .time-sheet .day, .time-sheet .date {
+h1, .instruction, .time-sheet thead th, .time-sheet .weekly, .time-sheet .total, .time-sheet .cal-cell-hours, .time-sheet .cal-cell-date {
   text-align: center;
   display: block;
   margin: 0 auto; }
@@ -108,6 +100,9 @@ h1 {
   width: 34px;
   border-bottom: 2px solid;
   height: 52px; }
+
+.payroll-center {
+  -webkit-print-color-adjust: exact; }
 
 /************************************************************
 
@@ -215,6 +210,9 @@ input[type='submit'].btn {
 
   .print {
     display: block; } }
+.payroll-center {
+  -webkit-print-color-adjust: exact; }
+
 /************************************************************
 
 	instruction css
@@ -326,23 +324,28 @@ input[type='submit'].btn {
   .time-sheet thead th:last-child {
     font-size: 15px;
     width: 80px; }
-  .time-sheet .hours {
-    height: 67px; }
-    .time-sheet .hours > input {
+  .time-sheet .cal-cell {
+    padding: 5px; }
+    .time-sheet .cal-cell > input {
       width: 47px; }
   .time-sheet .weekly {
     display: table-cell; }
   .time-sheet .total {
     display: table-cell;
     width: 55px; }
-  .time-sheet .day {
+    .time-sheet .total div:first-child {
+      font-size: 12px;
+      line-height: 12px;
+      margin-bottom: 11px; }
+    .time-sheet .total div:last-child {
+      margin-bottom: 12px; }
+  .time-sheet .cal-cell-hours {
     height: 23px;
-    margin-top: 30px; }
-  .time-sheet .date {
+    clear: both; }
+  .time-sheet .cal-cell-date {
     width: 30px;
     height: 25px;
-    margin-right: 5px;
-    margin-bottom: 0; }
+    margin-bottom: 3px; }
 
 /************************************************************
 
@@ -357,8 +360,3 @@ input[type='submit'].btn {
 	date css
 
  ************************************************************/
-.date {
-  width: 30px;
-  height: 25px;
-  margin-right: 5px;
-  margin-bottom: 0; }
