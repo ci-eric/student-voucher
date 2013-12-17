@@ -1,32 +1,4 @@
 /* CSS Document */
-th {
-  width: 116px;
-  font-size: 16px;
-  height: 35px; }
-
-.week {
-  font-size: 15px;
-  width: 80px; }
-
-.month,
-.weekly,
-.total,
-.date {
-  text-align: center; }
-
-td,
-th {
-  vertical-align: middle; }
-
-.pad-top-20 {
-  padding-top: 20px; }
-
-.pad-left-25 {
-  padding-left: 25px; }
-
-.total {
-  width: 55px; }
-
 .totaltxt {
   font-size: 12px;
   line-height: 12px;
@@ -34,18 +6,6 @@ th {
 
 #total {
   margin-bottom: 12px; }
-
-.input {
-  width: 60px; }
-
-input[type="radio"] {
-  -webkit-appearance: checkbox;
-  -moz-appearance: checkbox;
-  -ms-appearance: checkbox;
-  /* not currently supported */
-  -o-appearance: checkbox;
-  /* not currently supported */
-  width: auto; }
 
 /************************************************************
 
@@ -64,7 +24,7 @@ input[type="radio"] {
 .signature div, .payroll > *, .personal > div:nth-child(1), .personal > div:nth-child(2), .personal > div:nth-child(3), .personal > div:nth-child(4), .personal > div:nth-child(5) {
   float: left; }
 
-.date {
+.time-sheet .date, .date {
   float: right; }
 
 .payroll, .personal, .time-sheet .weekly, .time-sheet .total, .certify {
@@ -73,13 +33,16 @@ input[type="radio"] {
 .payroll-right > div:first-child, .time-sheet thead {
   background-color: #DFDFDF; }
 
-.instruction, .payroll-left, .payroll-right, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td, .time-sheet thead th, .date {
+.time-sheet td, .time-sheet thead th {
+  vertical-align: center; }
+
+.instruction, .payroll-left, .payroll-right, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td, .time-sheet thead th, .time-sheet .date, .date {
   border: 1px solid black; }
 
 .instruction {
   border-bottom: none; }
 
-h1, .instruction, .time-sheet thead th, .time-sheet .day {
+h1, .instruction, .time-sheet thead th, .time-sheet .weekly, .time-sheet .total, .time-sheet .day, .time-sheet .date {
   text-align: center;
   display: block;
   margin: 0 auto; }
@@ -357,14 +320,29 @@ input[type='submit'].btn {
   width: 975px; }
   .time-sheet thead th {
     display: table-cell;
-    vertical-align: middle; }
+    font-size: 16px;
+    height: 35px;
+    width: 116px; }
+  .time-sheet thead th:last-child {
+    font-size: 15px;
+    width: 80px; }
   .time-sheet .hours {
     height: 67px; }
     .time-sheet .hours > input {
       width: 47px; }
+  .time-sheet .weekly {
+    display: table-cell; }
+  .time-sheet .total {
+    display: table-cell;
+    width: 55px; }
   .time-sheet .day {
     height: 23px;
     margin-top: 30px; }
+  .time-sheet .date {
+    width: 30px;
+    height: 25px;
+    margin-right: 5px;
+    margin-bottom: 0; }
 
 /************************************************************
 

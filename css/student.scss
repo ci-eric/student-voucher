@@ -2,36 +2,6 @@
 /* CSS Document */
 
 
-th {
-	width:116px;
-	font-size:16px;
-	height:35px;
-}
-
-
-
-.week {
-	font-size:15px;
-	width:80px;
-}
-
-
-.month,
-.weekly, 
-.total, 
-.date				{ text-align:center; }
-
-td,
-th 				{ vertical-align: middle; }
-
-
-
-
-.pad-top-20 	{ padding-top:20px; }
-.pad-left-25	{ padding-left:25px; }
-
-.total { width:55px; }
-
 .totaltxt {
 	font-size: 12px;
 	line-height:12px;
@@ -39,18 +9,6 @@ th 				{ vertical-align: middle; }
 }
 
 #total { margin-bottom:12px; }
-
-.input {
-	width:60px;
-}
-
-input[type="radio"] {
-    -webkit-appearance: checkbox;
-    -moz-appearance: checkbox;
-    -ms-appearance: checkbox;     /* not currently supported */
-    -o-appearance: checkbox;      /* not currently supported */
-	width:auto;
-}
 
 
 

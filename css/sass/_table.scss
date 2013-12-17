@@ -11,9 +11,12 @@
  	width: 975px;
 
  	& tbody,
- 	& tr,
+ 	& tr {
+ 		@extend %border;
+ 	}
  	& td {
  		@extend %border;
+ 		@extend %v-align-center;
  	}
 
  	& thead {
@@ -22,9 +25,17 @@
  		th {
  			@extend %border;
  			@extend %center;
+ 			@extend %v-align-center;
 
  			display: table-cell;
- 			vertical-align: middle;
+			font-size:16px;
+			height:35px;
+			width:116px;
+ 		}
+
+ 		th:last-child {
+			font-size:15px;
+			width:80px;
  		}
  	}
 
@@ -38,9 +49,16 @@
 
  	.weekly {
  		@extend %bold;
+ 		@extend %center;
+
+ 		display: table-cell;
  	}
  	.total {
  		@extend %bold;
+ 		@extend %center;
+
+ 		display: table-cell;
+ 		width: 55px;
  	}
 
  	.day {
@@ -49,4 +67,15 @@
 		height: 23px;
 		margin-top: 30px;
  	}
- }
+
+ 	.date{
+		@extend %border;
+ 		@extend %center;
+		@extend %float-r;
+		
+		width:30px;
+		height:25px;
+		margin-right:5px;
+		margin-bottom:0;
+	}
+}
