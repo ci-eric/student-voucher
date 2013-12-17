@@ -1,28 +1,8 @@
 /* CSS Document */
-.header tbody, .yearAndType tbody, .payroll tbody,
-.header td, .yearAndType td,
-.yearAndType tr, th {
-  border: 1px solid; }
-
-td, input {
-  width: 47px; }
-
-tr {
-  height: 30px; }
-
 th {
   width: 116px;
   font-size: 16px;
   height: 35px; }
-
-.hours {
-  height: 67px; }
-
-.calendar {
-  height: 23px;
-  display: block;
-  margin: 30px auto 0;
-  text-align: center; }
 
 .week {
   font-size: 15px;
@@ -93,13 +73,13 @@ input[type="radio"] {
 .payroll-right > div:first-child, .time-sheet thead {
   background-color: #DFDFDF; }
 
-.instruction, .payroll-left, .payroll-right, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td, .date {
+.instruction, .payroll-left, .payroll-right, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td, .time-sheet thead th, .date {
   border: 1px solid black; }
 
 .instruction {
   border-bottom: none; }
 
-h1, .instruction, .time-sheet thead th {
+h1, .instruction, .time-sheet thead th, .time-sheet .day {
   text-align: center;
   display: block;
   margin: 0 auto; }
@@ -378,6 +358,13 @@ input[type='submit'].btn {
   .time-sheet thead th {
     display: table-cell;
     vertical-align: middle; }
+  .time-sheet .hours {
+    height: 67px; }
+    .time-sheet .hours > input {
+      width: 47px; }
+  .time-sheet .day {
+    height: 23px;
+    margin-top: 30px; }
 
 /************************************************************
 

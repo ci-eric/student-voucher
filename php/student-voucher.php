@@ -274,10 +274,10 @@
 					{
 						$weeklyHours += $hours = self::test_input($_POST['Table'][$j][$i]);
 
-						echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='$hours'>";
+						echo "	<input name='Table[$j][$i]' class='day' type='text' value='$hours'>";
 					}
 					else
-						echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='0'>";
+						echo "	<input name='Table[$j][$i]' class='day' type='text' value='0'>";
 
 					echo "</td>";
 

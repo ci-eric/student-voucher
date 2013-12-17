@@ -1,27 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
-.header tbody, .yearAndType tbody, .payroll tbody,
-.header td, .yearAndType td,
-.yearAndType tr, th { border:1px solid; }
-td, input {	width:47px; }
-tr { height:30px; }
+
 th {
 	width:116px;
 	font-size:16px;
 	height:35px;
-}
-.hours{
-	height:67px;
-}
-
-
-
-.calendar {
-	height:23px;
-	display:block;
-	margin:30px auto 0;
-	text-align:center;
 }
 
 
