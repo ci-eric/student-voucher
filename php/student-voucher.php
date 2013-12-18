@@ -260,7 +260,7 @@
 						$hours = isset($_POST['Table'])? self::test_input($_POST['Table'][$j][$i]) : 0;
 						$weeklyHours += $hours;
 
-						echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='$hours'>";
+						echo "	<input name='Table[$j][$i]' class='cal-cell-hours' type='text' value='$hours'>";
 
 					echo "</td>";
 
