@@ -231,8 +231,7 @@ input[type='submit'].btn {
     margin-right: 5px;
     width: 190px; }
     .personal > div:nth-child(1) > input {
-      border: none;
-      border-bottom: 1px solid black;
+      border: 1px solid #ccc;
       width: 180px; }
       @media print {
         .personal > div:nth-child(1) > input {
@@ -244,8 +243,7 @@ input[type='submit'].btn {
     margin-right: 5px;
     width: 150px; }
     .personal > div:nth-child(2) > input {
-      border: none;
-      border-bottom: 1px solid black;
+      border: 1px solid #ccc;
       width: 140px; }
       @media print {
         .personal > div:nth-child(2) > input {
@@ -257,8 +255,7 @@ input[type='submit'].btn {
     margin-right: 5px;
     width: 200px; }
     .personal > div:nth-child(3) > input {
-      border: none;
-      border-bottom: 1px solid black;
+      border: 1px solid #ccc;
       width: 190px; }
       @media print {
         .personal > div:nth-child(3) > input {
@@ -270,8 +267,7 @@ input[type='submit'].btn {
     margin-right: 5px;
     width: 270px; }
     .personal > div:nth-child(4) > input {
-      border: none;
-      border-bottom: 1px solid black;
+      border: 1px solid #ccc;
       width: 260px; }
       @media print {
         .personal > div:nth-child(4) > input {
@@ -283,8 +279,7 @@ input[type='submit'].btn {
     margin-right: 5px;
     width: 110px; }
     .personal > div:nth-child(5) > input {
-      border: none;
-      border-bottom: 1px solid black;
+      border: 1px solid #ccc;
       width: 100px; }
       @media print {
         .personal > div:nth-child(5) > input {
