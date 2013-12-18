@@ -5,10 +5,9 @@
  ************************************************************/
 
  .time-sheet {
- 	@extend %margin-l-45;
 
  	border-collapse: collapse;
- 	width: 975px;
+ 	width: 917px;
 
  	& tbody,
  	& tr {
@@ -40,6 +39,7 @@
  	}
 
 	.cal-cell {
+		height: 59px;
 		padding: 5px;
 
 		& > input {
@@ -53,22 +53,7 @@
 
  		display: table-cell;
  	}
- 	.total {
- 		@extend %bold;
- 		@extend %center;
-
- 		display: table-cell;
- 		width: 55px;
-
- 		& div:first-child {
-			font-size: 12px;
-			line-height:12px;
-			margin-bottom:11px;
- 		}
- 		& div:last-child {
- 			margin-bottom:12px;
- 		}
- 	}
+ 	
 
  	.cal-cell-hours {
  		@extend %center;
@@ -87,3 +72,34 @@
 		margin-bottom: 3px;
 	}
 }
+
+.calendar {
+	@extend %center;
+
+	position: relative;
+	width: 917px;
+}
+
+.total {
+ 		@extend %bold;
+ 		@extend %center;
+ 		@extend %border;
+
+ 		//display: table-cell;
+ 		height: 69px;
+ 		width: 55px;
+
+ 		position: absolute;
+ 		right: -55px;
+ 		bottom: 0;
+ 		border-left: none;
+
+ 		& div:first-child {
+			font-size: 12px;
+			line-height:12px;
+			margin-bottom:11px;
+ 		}
+ 		& div:last-child {
+ 			margin-bottom:12px;
+ 		}
+ 	}
