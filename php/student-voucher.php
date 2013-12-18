@@ -1,16 +1,17 @@
 <?php
 
+
 							/************************************************************
 
-							 	Student Assitance Attendance Voucher Application
+								Student Assistant Attendance Voucher Application
 
-							 		created by: Daniel Larkins
-							 					Eric Nelson
-							 					Evan Taylor
+									created by: Daniel Larkins
+												Eric Nelson
+												Evan Taylor
 
-							 		created on:	October 7, 2013 
+									created on:	October 7, 2013 
 
-							 		version ##:	0.1.5
+									version ##:	0.1.5
 
 							 ************************************************************/
 
@@ -171,44 +172,36 @@
 		 ************************************************************/
 		public static function createUser()
 		{
+			/*
 			$url = $_SERVER["REQUEST_URI"];
 			$parts = explode('/', $url);
 			$path = $parts[count($parts) - 1];
 			$user = explode('?', $path);
-
-			if (count($user) == 4)
-			{
-				$name = $user[1];
-				$dept = $user[2];
-				$supr = $user[3];
-			}
-			else
-			{
-				$name = '';
-				$dept = '';
-				$supr = '';
-			}
+			*/
+			$name = $_GET['name'];
+			$dept = $_GET['dept'];
+			$supr = $_GET['supr'];
 
 			echo "	<div class='personal'>
 						<div>
 							NAME (Print):
-							<input type='text' value=$name>
+							<input type='text' name='name' value='$name' />
 						</div>
 						<div>
 							SSN#:
-							<input type='text' disabled='disabled'>
+							<input type='text' name='ssn' disabled='disabled' />
 						</div>
 						<div>
 							DEPARTMENT TITLE AND #:
-							<input type='text' value=$dept>
+							<input type='text' name='dept' value='$dept' />
 						</div>
 						<div>
 							SUPERVISOR NAME and TITLE:
-							<input type='text' value=$supr>
+							<input type='text' name='supr' value='$supr' />
 						</div>
 						<div>
 							HOURLY RATE:
-							<input type='text' disabled='disabled'>
+							<input type='text' name='hourly' disabled='disabled' />
 						</div>
 					</div>";
 		}
@@ -270,14 +263,10 @@
 									$currDay
 								</div>";
 
-					if($_SERVER["REQUEST_METHOD"] == "POST")
-					{
-						$weeklyHours += $hours = self::test_input($_POST['Table'][$j][$i]);
+						$hours = isset($_POST['Table'])? self::test_input($_POST['Table'][$j][$i]) : 0;
+						$weeklyHours += $hours;
 
 						echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='$hours'>";
-					}
-					else
-						echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='0'>";
 
 					echo "</td>";
 

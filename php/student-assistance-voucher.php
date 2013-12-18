@@ -1,3 +1,58 @@
+<?php
+function Redirect($url, $permanent = false)
+{
+    if (headers_sent() === false) {
+    	header('Location: ' . $url, true, ($permanent === true) ? 301 : 302);
+    }
+    exit();
+}
+
+/**
+ * Determine if a redirect is needed
+ * This function defines when it is necessary to redirect
+ * Compares url params with posted values
+ */
+function needRedirect() {
+	/* Do any of the values NOT match? */
+	return strcmp($_GET['name'], $_POST['name']) != 0 ||
+		   strcmp($_GET['dept'], $_POST['dept']) != 0 ||
+		   strcmp($_GET['supr'], $_POST['supr']) != 0;
+}
+
+/**
+ * Build Redirect URL
+ * This function builds the URL that will be redirected to
+ */
+function buildRedirectURL() {
+	$query  = "?name=" . (( strcmp($_GET['name'], $_POST['name']) != 0 )? $_POST['name'] : $_GET['name']);
+	$query .= "&dept=" . (( strcmp($_GET['dept'], $_POST['dept']) != 0 )? $_POST['dept'] : $_GET['dept']);
+	$query .= "&supr=" . (( strcmp($_GET['supr'], $_POST['supr']) != 0 )? $_POST['supr'] : $_GET['supr']);
+
+	return $_SERVER['PATH_INFO'] . $query;
+}
+
+$expire = time()+60*60*24*14;
+$path =  '/';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+	setcookie("timesheet-data", json_encode($_POST), $expire, $path);
+
+	if ( needRedirect() ) { /* Redirect is needed */
+		setcookie("timesheet-redirect", true, $expire, $path);
+		Redirect( buildRedirectURL(), false );
+
+	} else {
+		// Redirect is NOT needed
+	}
+} else {
+	// Delete cookie
+	setcookie("timesheet-redirect", "", time()-3600, $path);
+	$_POST = json_decode($_COOKIE["timesheet-data"], true);
+}
+
+?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
