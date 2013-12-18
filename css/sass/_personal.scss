@@ -17,23 +17,29 @@ $header: 190px, 150px, 200px, 270px, 110px;
 	padding: 0 5px;
 	width: 945px;
 
-	@for $i from 1 to 6 {
-		&  > div:nth-child(#{$i}) {
-			@extend %float-l;
+	& > div {
+		@extend %float-l;
 
-			border-right: 1px solid black;
-			display: block;
-			margin-right: 5px;
+		border-right: 1px solid black;
+		display: block;
+		margin-right: 5px;
+		
+		& > input {
+			border: 1px solid #ccc;
+
+			@media print {
+				border: none;
+				background-color: white;
+			}
+		}
+	}
+
+	@for $i from 1 to 5 {
+		&  > div:nth-child(#{$i}) {
 			width: nth($header, $i);
 
 			& > input {
-				border: 1px solid #ccc;
 				width: nth($header, $i) - 10px;
-
-				@media print {
-					border: none;
-					background-color: white;
-				}
 			}
 		}
 	}
@@ -41,6 +47,7 @@ $header: 190px, 150px, 200px, 270px, 110px;
 	& > div:last-child {
 		border-right: none;
 		margin-right: 0;
+		width: nth($header, length($header));
 
 		& > input {
 			width: nth($header, length($header)) - 5px;
