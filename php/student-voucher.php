@@ -1,9 +1,8 @@
 <?php
 
-
 							/************************************************************
 
-								Student Assistant Attendance Voucher Application
+								Student Assitance Attendance Voucher Application
 
 									created by: Daniel Larkins
 												Eric Nelson
@@ -172,36 +171,30 @@
 		 ************************************************************/
 		public static function createUser()
 		{
-			/*
-			$url = $_SERVER["REQUEST_URI"];
-			$parts = explode('/', $url);
-			$path = $parts[count($parts) - 1];
-			$user = explode('?', $path);
-			*/
 			$name = $_GET['name'];
 			$dept = $_GET['dept'];
 			$supr = $_GET['supr'];
 
 			echo "	<div class='personal'>
-						<div>
+						<div class='name'>
 							NAME (Print):
-							<input type='text' name='name' value='$name' />
+							<input type='text' name='name' value='$name' autocomplete='off' />
 						</div>
-						<div>
+						<div class='ssn'>
 							SSN#:
-							<input type='text' name='ssn' disabled='disabled' />
+							<input type='text' name='ssn' disabled='disabled' autocomplete='off' />
 						</div>
-						<div>
+						<div class='department'>
 							DEPARTMENT TITLE AND #:
-							<input type='text' name='dept' value='$dept' />
+							<input type='text' name='dept' value='$dept' autocomplete='off' />
 						</div>
-						<div>
+						<div class='supervisor'>
 							SUPERVISOR NAME and TITLE:
-							<input type='text' name='supr' value='$supr' />
+							<input type='text' name='supr' value='$supr' autocomplete='off' />
 						</div>
-						<div>
+						<div class='hourly-rate last'>
 							HOURLY RATE:
-							<input type='text' name='hourly' disabled='disabled' />
+							<input type='text' name='hourly' disabled='disabled' autocomplete='off' />
 						</div>
 					</div>";
 		}
@@ -235,9 +228,10 @@
 			$daysInCurrMonth = date("t", mktime(0, 0, 0, $currMonth, 1, $year));
 			$weeks = self::getWeeksofCalendar($currDay, $daysInCurrMonth, $currMonth, $month, $year);
 
-			echo "<table class='time-sheet center'>";
+			echo "	<div class='calendar'>
+					<table class='time-sheet'>";
 			echo "	<thead>
-				        <tr class='bg-lightGrey'>
+				        <tr>
 				            <th>SUNDAY</th>
 				            <th>MONDAY</th>
 				            <th>TUESDAY</th>
@@ -245,7 +239,7 @@
 				            <th>THURSDAY</th>
 				            <th>FRIDAY</th>
 				            <th>SATURDAY</th>
-				            <th class='week'>WEEKLY HOURS</th>
+				            <th class='last'>WEEKLY HOURS</th>
 				        </tr>
 				    </thead>";
 			echo "<tbody>";
@@ -258,15 +252,20 @@
 
 				for ($i = 0; $i < 7; $i++)
 				{
-					echo "	<td class='hours'>
-								<div class='date'>
+					echo "	<td class='cal-cell'>
+								<div class='cal-cell-date'>
 									$currDay
 								</div>";
 
-						$hours = isset($_POST['Table'])? self::test_input($_POST['Table'][$j][$i]) : 0;
+						$hours = 0;
+						if (isset($_POST['Table']))
+							$temp = self::test_input($_POST['Table'][$j][$i]);
+							if ($temp > 0)
+								$hours = $temp;
+
 						$weeklyHours += $hours;
 
-						echo "	<input name='Table[$j][$i]' class='calendar' type='text' value='$hours'>";
+						echo "	<input name='Table[$j][$i]' class='cal-cell-hours' type='text' value='$hours' autocomplete='off' pattern='\d{1,2}(\.\d{1,3})?' />";
 
 					echo "</td>";
 
@@ -286,16 +285,20 @@
 
 				if ($j == $weeks)
 				{
-					echo "	<td class='total bold'>
+					echo "</tbody></table>";
+
+					echo "	<div class='total'>
 				            	<div class='totaltxt'>TOTAL HOURS</div>
 				            	<div id='total'>$totalHours</div>
-				            </td>";
+				            </div>";
 				}
-
-				echo "</tr>";
+				else
+				{
+					echo "</tr>";
+				}
 			}
 
-			echo "</tbody></table>";
+			echo "</div>";
 		}
 
 

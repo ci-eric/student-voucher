@@ -1,158 +1,33 @@
 /* CSS Document */
-h1 {
-  font-size: 22px;
-  width: 510px; }
-
-.header tbody, .yearAndType tbody, .payroll tbody,
-.header td, .yearAndType td,
-.yearAndType tr, th {
-  border: 1px solid; }
-
-td, input {
-  width: 47px; }
-
-tr {
-  height: 30px; }
-
-th {
-  width: 116px;
-  font-size: 16px;
-  height: 35px; }
-
-.smallBoxDesc {
-  margin: 0 75px 0 120px; }
-
-.left-5 {
-  margin-left: 5px; }
-
-.margin-left-10 {
-  margin-left: 10px; }
-
-.headerCell {
-  font-size: 13px; }
-
-.yearAndType,
-.yearAndType tbody,
-.yearAndType tr,
-.yearAndType .last {
-  border-bottom: none; }
-
-.height-40 {
-  height: 40px; }
-
-.yearAndType {
-  width: 917px; }
-
-.date {
-  border: 1px solid #000;
-  width: 30px;
-  height: 25px;
-  float: right;
-  margin-right: 5px;
-  margin-bottom: 0; }
-
-.hours {
-  height: 67px; }
-
-.calendar {
-  height: 23px;
-  display: block;
-  margin: 30px auto 0;
-  text-align: center; }
-
-.week {
-  font-size: 15px;
-  width: 80px; }
-
-.month,
-.weekly,
-.total,
-.date,
-th {
-  text-align: center; }
-
-td,
-th {
-  vertical-align: middle; }
-
-.month {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px; }
-
-.pad-top-20 {
-  padding-top: 20px; }
-
-.pad-left-25 {
-  padding-left: 25px; }
-
-.total {
-  width: 55px; }
-
-.totaltxt {
-  font-size: 12px;
-  line-height: 12px;
-  margin-bottom: 11px; }
-
-#total {
-  margin-bottom: 12px; }
-
-.input {
-  width: 60px; }
-
-.notCurrent {
-  color: #888; }
-
-.bg-lightGrey {
-  background-color: #DFDFDF; }
-
-input[type="radio"] {
-  -webkit-appearance: checkbox;
-  -moz-appearance: checkbox;
-  -ms-appearance: checkbox;
-  /* not currently supported */
-  -o-appearance: checkbox;
-  /* not currently supported */
-  width: auto; }
-
-.assistant {
-  font-size: 12px; }
-
-.signature {
-  width: 900px; }
-
-/************************************************************
-
-	temporary until class inhert from placeholders
-
- ************************************************************/
-.float-r {
-  float: right; }
-
-.italics {
-  font-style: italic; }
-
-.autoHeight {
-  height: auto; }
-
 .signature div, .payroll > *, .personal > div:nth-child(1), .personal > div:nth-child(2), .personal > div:nth-child(3), .personal > div:nth-child(4), .personal > div:nth-child(5) {
   float: left; }
 
-.payroll, .personal, .time-sheet .weekly, .time-sheet .total, .certify {
+.time-sheet .cal-cell-date {
+  float: right; }
+
+.payroll, .personal, .time-sheet .weekly, .total, .certify {
   font-weight: bold; }
 
-.instruction, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td {
+.payroll-right > div:first-child, .time-sheet thead {
+  background-color: #DFDFDF; }
+
+.time-sheet td, .time-sheet thead th {
+  vertical-align: center; }
+
+.instruction, .payroll-left, .payroll-right, .personal, .time-sheet tbody, .time-sheet tr, .time-sheet td, .time-sheet thead th, .time-sheet .cal-cell-date, .total {
   border: 1px solid black; }
 
 .instruction {
   border-bottom: none; }
 
-h1, .instruction {
+h1, .payroll, .month-year, .instruction, .time-sheet thead th, .time-sheet .weekly, .time-sheet .cal-cell-hours, .time-sheet .cal-cell-date, .calendar, .total, .certify {
   text-align: center;
   display: block;
   margin: 0 auto; }
 
-.payroll, .month-year, .instruction, .time-sheet {
-  margin-left: 45px; }
+#page-wrapper {
+  width: 1050px;
+  margin: 0 auto; }
 
 /************************************************************
 
@@ -160,7 +35,9 @@ h1, .instruction {
 
  ************************************************************/
 h1 {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-size: 22px;
+  width: 510px; }
 
 /************************************************************
 
@@ -169,8 +46,9 @@ h1 {
  ************************************************************/
 .signature {
   font-size: 13px;
-  margin: 16px 0 16px 120px;
-  overflow: auto; }
+  margin: 16px auto 16px;
+  overflow: auto;
+  width: 880px; }
   .signature div {
     border-top: 1px solid black;
     padding-top: 2px; }
@@ -194,13 +72,16 @@ h1 {
 .payroll-left {
   width: 620px;
   padding: 0 0 0 10px;
-  border: 1px solid;
   height: 52px; }
 
 .payroll-right {
   width: 283px;
-  border: 1px solid;
   height: 52px; }
+  .payroll-right > * {
+    padding-left: 25px;
+    border-bottom: 1px solid black; }
+  .payroll-right > div:last-child {
+    border: none; }
 
 .payroll-center {
   background: #000;
@@ -208,9 +89,8 @@ h1 {
   border-bottom: 2px solid;
   height: 52px; }
 
-.payroll-middle {
-  border-bottom: 1px solid;
-  border-top: 1px solid; }
+.payroll-center {
+  -webkit-print-color-adjust: exact; }
 
 /************************************************************
 
@@ -318,6 +198,9 @@ input[type='submit'].btn {
 
   .print {
     display: block; } }
+.payroll-center {
+  -webkit-print-color-adjust: exact; }
+
 /************************************************************
 
 	instruction css
@@ -334,84 +217,40 @@ input[type='submit'].btn {
  ************************************************************/
 .personal {
   font-size: 0.8em;
-  margin: 0 0 20px 25px;
+  margin: 0 auto 20px;
   overflow: auto;
-  padding: 0 5px;
   width: 945px;
-  /*& > div > input[disabled] {
-  	border: none;
-  	color: #fff;
-  }*/ }
-  .personal > div:nth-child(1) {
-    border-right: 1px solid black;
-    display: block;
-    margin-right: 5px;
-    width: 190px; }
-    .personal > div:nth-child(1) > input {
-      border: none;
-      border-bottom: 1px solid black;
-      width: 180px; }
-      @media print {
-        .personal > div:nth-child(1) > input {
-          border: none;
-          background-color: white; } }
-  .personal > div:nth-child(2) {
-    border-right: 1px solid black;
-    display: block;
-    margin-right: 5px;
-    width: 150px; }
-    .personal > div:nth-child(2) > input {
-      border: none;
-      border-bottom: 1px solid black;
-      width: 140px; }
-      @media print {
-        .personal > div:nth-child(2) > input {
-          border: none;
-          background-color: white; } }
-  .personal > div:nth-child(3) {
-    border-right: 1px solid black;
-    display: block;
-    margin-right: 5px;
-    width: 200px; }
-    .personal > div:nth-child(3) > input {
-      border: none;
-      border-bottom: 1px solid black;
-      width: 190px; }
-      @media print {
-        .personal > div:nth-child(3) > input {
-          border: none;
-          background-color: white; } }
-  .personal > div:nth-child(4) {
-    border-right: 1px solid black;
-    display: block;
-    margin-right: 5px;
-    width: 270px; }
-    .personal > div:nth-child(4) > input {
-      border: none;
-      border-bottom: 1px solid black;
-      width: 260px; }
-      @media print {
-        .personal > div:nth-child(4) > input {
-          border: none;
-          background-color: white; } }
-  .personal > div:nth-child(5) {
-    border-right: 1px solid black;
-    display: block;
-    margin-right: 5px;
-    width: 110px; }
-    .personal > div:nth-child(5) > input {
-      border: none;
-      border-bottom: 1px solid black;
-      width: 100px; }
-      @media print {
-        .personal > div:nth-child(5) > input {
-          border: none;
-          background-color: white; } }
-  .personal > div:last-child {
-    border-right: none;
-    margin-right: 0; }
-    .personal > div:last-child > input {
-      width: 105px; }
+}
+.personal > div {
+  float: left;
+  margin: 0;
+  padding: 2px 5px;
+  border-right: 1px solid black;
+}
+.personal > div.last {
+  border-right: none;
+}
+
+.personal input {
+  border: 1px solid #ccc;
+  display: block;
+}
+
+.name input {
+  width: 180px;
+}
+.ssn input {
+  width: 140px;
+}
+.department input {
+  width: 190px;
+}
+.supervisor input {
+  width: 260px;
+}
+.hourly-rate input {
+  width: 100px;
+}
 
 /************************************************************
 
@@ -420,7 +259,47 @@ input[type='submit'].btn {
  ************************************************************/
 .time-sheet {
   border-collapse: collapse;
-  width: 975px; }
+  width: 917px; }
+  .time-sheet thead th {
+    display: table-cell;
+    font-size: 16px;
+    height: 35px;
+    width: 116px; }
+  .time-sheet .last {
+    font-size: 15px;
+    width: 80px; }
+  .time-sheet .cal-cell {
+    height: 59px;
+    padding: 5px; }
+    .time-sheet .cal-cell > input {
+      width: 47px; }
+  .time-sheet .weekly {
+    display: table-cell; }
+  .time-sheet .cal-cell-hours {
+    height: 23px;
+    clear: both; }
+  .time-sheet .cal-cell-date {
+    width: 30px;
+    height: 25px;
+    margin-bottom: 3px; }
+
+.calendar {
+  position: relative;
+  width: 917px; }
+
+.total {
+  height: 69px;
+  width: 55px;
+  position: absolute;
+  right: -55px;
+  bottom: 0;
+  border-left: none; }
+  .total div:first-child {
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 11px; }
+  .total div:last-child {
+    margin-bottom: 12px; }
 
 /************************************************************
 
@@ -429,3 +308,9 @@ input[type='submit'].btn {
  ************************************************************/
 .certify {
   width: 580px; }
+
+/************************************************************
+
+	date css
+
+ ************************************************************/
